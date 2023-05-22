@@ -1,13 +1,13 @@
-package com.example.mybottomnav.ui.home
+package com.example.mybottomnav.ui.account
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class AccountViewModel : ViewModel() {
 
 //    private val _text = MutableLiveData<String>().apply {
-//        value = "This is home Fragment"
+//        value = "This is Account Fragment"
 //    }
 //    val text: LiveData<String> = _text
 }

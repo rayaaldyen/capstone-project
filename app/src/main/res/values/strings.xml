@@ -1,6 +1,46 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">My Bottom Nav</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_add">Add</string>
+    <string name="title_history">History</string>
+    <string name="title_account">Account</string>
+    <string name="region">Region</string>
+    <string name="temperature">30°C</string>
+    <string name="type_weather">Heavy Rain</string>
+    <string name="plant">Plant Name</string>
+    <string name="percent">20%</string>
+    <string name="popular">Most Popular Horticulture</string>
+    <string name="logout">Logout</string>
+    <string name="username_layout">Username</string>
+    <string name="username">Rayden Zyon</string>
+    <string name="email_layout">Email</string>
+    <string name="email">raydenzyn@gmail.com</string>
+    <string name="password_layout">Password</string>
+    <string name="password">********</string>
+    <string name="change" tools:ignore="ExtraTranslation">Ubah</string>
+    <string name="under_score">__</string>
+
+    <string-array name="data_tanaman">
+        <item>Tomat</item>
+        <item>Cabai</item>
+        <item>Bawang</item>
+        <item>Bayam</item>
+        <item>Seledri</item>
+        <item>Kacang</item>
+        <item>Selada</item>
+        <item>Timun</item>
+        <item>Pakcoy</item>
+    </string-array>
+
+    <string-array name="data_persen">
+        <item>50%</item>
+        <item>47%</item>
+        <item>44%</item>
+        <item>39%</item>
+        <item>37%</item>
+        <item>30%</item>
+        <item>25%</item>
+        <item>19%</item>
+        <item>10%</item>
+    </string-array>
 </resources>
