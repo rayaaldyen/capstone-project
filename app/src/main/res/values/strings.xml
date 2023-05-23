@@ -54,4 +54,11 @@
     <string name="signup_failed">There is an error while entering the data</string>
     <string name="register_agreement">By signing up, you’re agree to our Terms &amp; Conditions and Privacy Policy</string>
     <string name="input_prediksi">Masukkan kondisi geografis</string>
+    <string name="ph_tanah">PH Tanah</string>
+    <string name="curah_hujan">Curah Hujan</string>
+    <string name="suhu">Suhu</string>
+    <string name="prediksi">Prediksi</string>
+    <string name="mulai_prediksi">Mulai Prediksi</string>
+    <string name="hasil_prediksi">Hasil Prediksi</string>
+    <string name="result_text">Daftar tanaman yang mungkin cocok</string>
 </resources>
