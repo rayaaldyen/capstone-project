@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
 <!--    <androidx.cardview.widget.CardView-->
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_plants_history"
+            android:id="@+id/rv_popular_plants"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -134,13 +134,14 @@
         android:layout_marginBottom="3dp"
         android:text="@string/popular"
         android:textStyle="bold"
+        app:fontFamily="sans-serif-light"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="326dp"
-        android:layout_height="313dp"
+        android:layout_width="255dp"
+        android:layout_height="276dp"
         android:src="@drawable/menu_page_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
