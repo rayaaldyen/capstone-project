@@ -10,6 +10,8 @@ import com.example.mybottomnav.dummy.data.Tanaman
 
 class ListTanamanAdapter(private val listTanaman: ArrayList<Tanaman>): RecyclerView.Adapter<ListTanamanAdapter.ListViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_popular_plant, parent, false)
         return ListViewHolder(view)
@@ -19,6 +21,10 @@ class ListTanamanAdapter(private val listTanaman: ArrayList<Tanaman>): RecyclerV
         val (name, percent) = listTanaman[position]
         holder.tvName.text = name
         holder.tvPercent.text = percent
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Tanaman)
     }
 
     override fun getItemCount(): Int = listTanaman.size

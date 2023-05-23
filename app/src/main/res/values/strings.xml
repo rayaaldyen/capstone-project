@@ -14,11 +14,32 @@
     <string name="username_layout">Username</string>
     <string name="username">Rayden Zyon</string>
     <string name="email_layout">Email</string>
-    <string name="email">raydenzyn@gmail.com</string>
+    <string name="email">Email</string>
     <string name="password_layout">Password</string>
-    <string name="password">********</string>
+    <string name="password">Password</string>
     <string name="change" tools:ignore="ExtraTranslation">Ubah</string>
     <string name="under_score">__</string>
+    <string name="name">Name</string>
+    <string name="desc">Desc</string>
+    <string name="see_details">See Details</string>
+    <string name="input_prediksi">Masukkan kondisi geografis</string>
+    <string name="ph_tanah">PH Tanah</string>
+    <string name="curah_hujan">Curah Hujan</string>
+    <string name="suhu">Suhu</string>
+    <string name="prediksi">Prediksi</string>
+    <string name="mulai_prediksi">Mulai Prediksi</string>
+    <string name="hasil_prediksi">Hasil Prediksi</string>
+    <string name="result_text">Daftar tanaman yang mungkin cocok</string>
+    <string name="login">Login</string>
+    <string name="acc_availability">Don`t have an account yet?</string>
+    <string name="to_register">Sign Up here</string>
+    <string name="signup">Sign Up</string>
+    <string name="start">Start</string>
+    <string name="invalid_email">Format alamat email salah</string>
+    <string name="error_password">Password length must be at least 8 characters or more</string>
+    <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
+    <string name="signup_failed">There is an error while entering the data</string>
+    <string name="register_agreement">By signing up, you’re agree to our Terms &amp; Conditions and Privacy Policy</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>
@@ -44,4 +65,22 @@
         <item>10%</item>
     </string-array>
 
+
+    <string-array name="data_result">
+        <item>Bayam</item>
+        <item>Cabai</item>
+        <item>Seledri</item>
+    </string-array>
+
+    <string-array name="data_deskripsi">
+        <item>Bayam (Amaranthus) adalah tumbuhan yang biasa ditanam untuk dikonsumsi daunnya sebagai sayuran hijau. Tumbuhan ini berasal dari Amerika tropik namun sekarang tersebar ke seluruh dunia. Tumbuhan ini dikenal sebagai sayuran sumber zat besi yang penting bagi tubuh.</item>
+        <item>Cabai adalah buah dan tumbuhan anggota genus Capsicum. Buahnya dapat digolongkan sebagai sayuran maupun bumbu, tergantung bagaimana pemanfaatannya. Sebagai bumbu, buah cabai yang pedas sangat populer di Asia Tenggara sebagai penguat rasa untuk makanan. Bagi seni masakan Padang, cabai bahkan dianggap sebagai "bahan makanan pokok" kesepuluh (alih-alih kesembilan). Sangat sulit bagi masakan Padang dibuat tanpa cabai.</item>
+        <item>Seledri (Apium graveolens L.) adalah sayuran daun dan tumbuhan obat yang biasa digunakan sebagai bumbu masakan. Beberapa negara termasuk Jepang, Cina dan Korea mempergunakan bagian tangkai daun sebagai bahan makanan. Di Indonesia tumbuhan ini diperkenalkan oleh penjajah Belanda dan digunakan daunnya untuk menyedapkan sup atau sebagai lalap.</item>
+    </string-array>
+
+    <integer-array name="data_result_photo">
+        <item>@drawable/bayam</item>
+        <item>@drawable/cabai</item>
+        <item>@drawable/seledri</item>
+    </integer-array>
 </resources>
