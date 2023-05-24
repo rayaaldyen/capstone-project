@@ -110,12 +110,12 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:alpha="1"
             android:ems="10"
+            android:hint="@string/password"
             android:inputType="textPassword"
             app:passwordToggleEnabled="true"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:alpha="1"
-            android:hint="@string/password"/>
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

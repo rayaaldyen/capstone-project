@@ -40,6 +40,9 @@
     <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
     <string name="signup_failed">There is an error while entering the data</string>
     <string name="register_agreement">By signing up, you’re agree to our Terms &amp; Conditions and Privacy Policy</string>
+    <string name="detail_tanaman">Detail Tanaman</string>
+    <string name="detail_desc">Detail Description</string>
+    <string name="detail_name">Detail Name</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyBottomNav"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name=".ui.Detail.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

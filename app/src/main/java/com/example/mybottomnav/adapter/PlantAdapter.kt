@@ -14,7 +14,11 @@ import com.example.mybottomnav.ui.Detail.DetailActivity
 
 class PlantAdapter(private val listPlant: ArrayList<Plant>) : RecyclerView.Adapter<PlantAdapter.ListViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
 
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var plantPhoto: ImageView = itemView.findViewById(R.id.plant_photo)
@@ -31,18 +35,19 @@ class PlantAdapter(private val listPlant: ArrayList<Plant>) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (photo, name, desc)=listPlant[position]
         val limitedDesc = if (desc.length > 25) desc.substring(0, 20) + "..." else desc
-        Glide.with(holder.itemView.context)
-            .load(photo)
-            .into(holder.plantPhoto)
+        holder.plantPhoto.setImageResource(photo)
         holder.tvName.text = name
         holder.tvDesc.text = limitedDesc
+
         holder.itemView.setOnClickListener {
             val moveToDetail = Intent (holder.itemView.context, DetailActivity::class.java)
-//            moveToDetail.putExtra(DetailActivity.EXTRA_NAME, name)
-//            moveToDetail.putExtra(DetailActivity.EXTRA_NATION, desc)
-//            moveToDetail.putExtra(DetailActivity.EXTRA_PHOTO, photo)
+            moveToDetail.putExtra("key_plant", listPlant[holder.adapterPosition])
             holder.itemView.context.startActivity(moveToDetail)
         }
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Plant)
     }
 
     override fun getItemCount(): Int = listPlant.size
