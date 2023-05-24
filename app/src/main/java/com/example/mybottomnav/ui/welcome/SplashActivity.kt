@@ -1,14 +1,10 @@
 package com.example.mybottomnav.ui.welcome
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
-import com.example.mybottomnav.MainActivity
 import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.ActivitySplashBinding
 import com.example.mybottomnav.ui.login.LoginActivity

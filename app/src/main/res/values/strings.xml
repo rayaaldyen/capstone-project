@@ -12,7 +12,6 @@
     <string name="popular">Most Popular Horticulture</string>
     <string name="logout">Logout</string>
     <string name="username_layout">Username</string>
-    <string name="username">Rayden Zyon</string>
     <string name="email_layout">Email</string>
     <string name="email">Email</string>
     <string name="password_layout">Password</string>
@@ -43,6 +42,8 @@
     <string name="detail_tanaman">Detail Tanaman</string>
     <string name="detail_desc">Detail Description</string>
     <string name="detail_name">Detail Name</string>
+    <string name="signup_pass_tittle">Selamat!</string>
+    <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>

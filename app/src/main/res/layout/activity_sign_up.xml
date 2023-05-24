@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:alpha="1"
             android:ems="10"
-            android:hint="@string/username"
+            android:hint="@string/username_layout"
             android:inputType="text"
             app:passwordToggleEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>

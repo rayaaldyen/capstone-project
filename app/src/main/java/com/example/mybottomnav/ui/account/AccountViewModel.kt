@@ -1,13 +1,18 @@
 package com.example.mybottomnav.ui.account
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import com.example.mybottomnav.model.UserModel
+import com.example.mybottomnav.model.UserPreference
+import kotlinx.coroutines.launch
 
-class AccountViewModel : ViewModel() {
+class AccountViewModel(private val pref: UserPreference) : ViewModel() {
+    fun getUser(): LiveData<UserModel> {
+        return pref.getUser().asLiveData()
+    }
 
-//    private val _text = MutableLiveData<String>().apply {
-//        value = "This is Account Fragment"
-//    }
-//    val text: LiveData<String> = _text
+    fun logout() {
+        viewModelScope.launch {
+            pref.logout()
+        }
+    }
 }
