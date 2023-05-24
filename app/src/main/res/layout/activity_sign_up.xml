@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
         app:passwordToggleEnabled="true">
 
-        <EditText
+        <com.example.mybottomnav.custom.PasswordEditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

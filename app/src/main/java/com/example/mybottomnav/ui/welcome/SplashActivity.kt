@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.mybottomnav.MainActivity
 import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.ActivitySplashBinding
 import com.example.mybottomnav.ui.login.LoginActivity
@@ -17,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 //        playAnimation()
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
         }, 3000)
     }
