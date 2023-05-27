@@ -35,8 +35,23 @@
         <entry key="..\:/Users/Elang Sotya/AndroidStudioProjects/capstone-project/app/src/main/res/layout/plant_item.xml" value="0.31140350877192985" />
         <entry key="..\:/Users/Elang Sotya/AndroidStudioProjects/capstone-project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/MyBottomNav/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_broken_clouds.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_clear_sky.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_cold.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_heavy_rain.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_mist.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_rain.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/gradient_thunderstorm.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/drawable/item_bg.xml" value="0.2305" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_main.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_result.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_sign_up.xml" value="0.176" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/fragment_account.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/fragment_history.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/plant_item.xml" value="0.264" />
       </map>
     </option>
   </component>
