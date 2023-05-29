@@ -22,7 +22,7 @@
     <string name="name">Name</string>
     <string name="desc">Desc</string>
     <string name="see_details">See Details</string>
-    <string name="input_prediksi">Temukan tanaman yang cocok untuk lahanmu</string>
+    <string name="input_prediksi">Masukkan kondisi geografis</string>
     <string name="ph_tanah">PH Tanah</string>
     <string name="curah_hujan">Curah Hujan</string>
     <string name="suhu">Suhu</string>
@@ -51,10 +51,7 @@
     <string name="category">Category</string>
     <string name="care_level">Care Level</string>
     <string name="size">Size</string>
-    <string name="result">Hasil</string>
-    <string name="market_price_prediction">Market Price Prediction</string>
-    <string name="recommendation_text">Rekomendasi Tanaman</string>
-    <string name="predict_text">Prediksi Harga</string>
+    <string name="market_trend">Market Trend</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>
@@ -104,27 +101,6 @@
         <item>Cabai</item>
         <item>Seledri</item>
     </string-array>
-    <string-array name="care_level">
-        <item>Mudah</item>
-        <item>Sedikit susah</item>
-        <item>Mudah</item>
-    </string-array>
-    <string-array name="size">
-        <item>Sedang</item>
-        <item>Sedang</item>
-        <item>Kecil</item>
-    </string-array>
-    <string-array name="market_prediction">
-        <item>Rp. 3.000/ikat</item>
-        <item>Rp. 60.000/kg</item>
-        <item>Rp. 5.000/ikat</item>
-    </string-array>
-    <string-array name="category">
-        <item>Outdoor</item>
-        <item>Outdoor</item>
-        <item>Outdoor</item>
-    </string-array>
-
 
     <string-array name="data_deskripsi">
         <item>Bayam (Amaranthus) adalah tumbuhan yang biasa ditanam untuk dikonsumsi daunnya sebagai sayuran hijau. Tumbuhan ini berasal dari Amerika tropik namun sekarang tersebar ke seluruh dunia. Tumbuhan ini dikenal sebagai sayuran sumber zat besi yang penting bagi tubuh.</item>
