@@ -1,150 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/card_view"-->
-<!--        android:layout_width="302dp"-->
-<!--        android:layout_height="136dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:cardCornerRadius="4dp"-->
-<!--        tools:layout_editor_absoluteX="34dp"-->
-<!--        tools:layout_editor_absoluteY="439dp">-->
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="302dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/gradient_heavy_rain"
-        android:elevation="10dp"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-
-        <TextView
-            android:id="@+id/tv_temperature"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="35dp"
-            android:layout_toEndOf="@id/img_item_photo"
-            android:text="@string/temperature"
-            android:textColor="@color/dark_gray"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_region"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/region"
-            android:textColor="@color/dark_gray"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/iv_location"
-            app:layout_constraintTop_toTopOf="@+id/iv_location" />
-
-
-        <ImageView
-            android:id="@+id/iv_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="@+id/tv_temperature"
-            app:layout_constraintTop_toBottomOf="@+id/tv_temperature"
-            app:srcCompat="@drawable/ic_location_on_24"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/iv_line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-12dp"
-            android:layout_marginTop="21dp"
-            android:rotation="90"
-            app:layout_constraintStart_toEndOf="@+id/tv_temperature"
-            app:layout_constraintTop_toTopOf="@+id/tv_temperature"
-            app:srcCompat="@drawable/line"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/tv_type_weather"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="7dp"
-            android:text="@string/type_weather"
-            android:textColor="@color/dark_gray"
-            app:layout_constraintStart_toEndOf="@+id/tv_temperature"
-            app:layout_constraintTop_toTopOf="@+id/tv_temperature" />
-
-        <ImageView
-            android:id="@+id/img_item_photo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/icon_heavy_rain"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-<!--    </androidx.cardview.widget.CardView>-->
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="302dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/bg_layout"
-        android:elevation="10dp"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_popular_plants"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_popular_plant" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:text="@string/popular"
-        android:textStyle="bold"
-        app:fontFamily="sans-serif-light"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="255dp"
-        android:layout_height="276dp"
-        android:src="@drawable/menu_page_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            tools:context=".ui.home.HomeFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!--    <ImageView-->
+            <!--        android:id="@+id/imageView2"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="560dp"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        tools:src="@tools:sample/avatars" />-->
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/backgroundLayout"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_marginTop="210dp"
+                android:background="@drawable/gradient_lime_green"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="302dp"
+                    android:layout_height="136dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gradient_heavy_rain"
+                    android:elevation="10dp"
+                    android:padding="8dp"
+                    android:alpha="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_temperature"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/img_item_photo"
+                        android:text="@string/temperature"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/region"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/iv_location"
+                        app:layout_constraintTop_toTopOf="@+id/iv_location" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_temperature"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_temperature"
+                        app:srcCompat="@drawable/ic_location_on_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/iv_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-12dp"
+                        android:layout_marginTop="21dp"
+                        android:rotation="90"
+                        app:layout_constraintStart_toEndOf="@+id/tv_temperature"
+                        app:layout_constraintTop_toTopOf="@+id/tv_temperature"
+                        app:srcCompat="@drawable/line"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_type_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/type_weather"
+                        android:textColor="@color/dark_gray"
+                        app:layout_constraintStart_toEndOf="@+id/tv_temperature"
+                        app:layout_constraintTop_toTopOf="@+id/tv_temperature" />
+
+                    <ImageView
+                        android:id="@+id/img_item_photo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/icon_heavy_rain"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--    </androidx.cardview.widget.CardView>-->
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="293dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/bg_layout"
+                    android:elevation="10dp"
+                    android:padding="8dp"
+                    android:alpha='0'
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_popular_plants"
+                        android:layout_width="273dp"
+                        android:layout_height="214dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:listitem="@layout/item_popular_plant" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular"
+                    android:textStyle="bold"
+                    android:alpha='0'
+                    app:fontFamily="sans-serif-light"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="331dp"
+                android:layout_height="216dp"
+                android:layout_marginTop="-30dp"
+                android:alpha="0"
+                android:src="@drawable/app_logo_bigger"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>

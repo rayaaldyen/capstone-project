@@ -1,10 +1,15 @@
 package com.example.mybottomnav.ui.home
 
+import android.animation.Animator
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.graphics.*
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +18,7 @@ import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.FragmentHomeBinding
 import com.example.mybottomnav.dummy.adapter.ListTanamanAdapter
 import com.example.mybottomnav.dummy.data.Tanaman
+import com.google.android.material.color.utilities.MaterialDynamicColors.background
 
 class HomeFragment : Fragment() {
 
@@ -30,6 +36,7 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
         (requireActivity() as MainActivity).supportActionBar!!.hide()
 
+        playAnimation()
         rvTanaman = binding.rvPopularPlants
         rvTanaman.setHasFixedSize(true)
         list.addAll(getListTanaman())
@@ -59,5 +66,18 @@ class HomeFragment : Fragment() {
         rvTanaman.layoutManager = LinearLayoutManager(activity)
         val listTanamanAdapter = ListTanamanAdapter(list)
         rvTanaman.adapter = listTanamanAdapter
+    }
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f).setDuration(1500).start()
+        val weather = ObjectAnimator.ofFloat(binding.constraintLayout, View.ALPHA, 1f).setDuration(300)
+        val tvPopular = ObjectAnimator.ofFloat(binding.textView, View.ALPHA, 1f).setDuration(300)
+        val popular = ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
+
+        AnimatorSet().apply {
+            playSequentially(weather, tvPopular, popular)
+            start()
+        }
     }
 }
