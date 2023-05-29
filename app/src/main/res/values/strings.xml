@@ -48,6 +48,10 @@
     <string name="signup_pass_tittle">Selamat!</string>
     <string name="permission_rejected">Permisi ditolak</string>
     <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
+    <string name="category">Category</string>
+    <string name="care_level">Care Level</string>
+    <string name="size">Size</string>
+    <string name="market_trend">Market Trend</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>
@@ -59,6 +63,24 @@
         <item>Selada</item>
         <item>Timun</item>
         <item>Pakcoy</item>
+    </string-array>
+
+    <string-array name="data_kota">
+        <item>Pilih Kota/Kabupaten</item>
+        <item>Malang</item>
+        <item>Surabaya</item>
+        <item>Banyuwangi</item>
+        <item>Jember</item>
+        <item>Pacitan</item>
+        <item>Madiun</item>
+        <item>Kediri</item>
+        <item>Probolinggo</item>
+        <item>Bondowoso</item>
+        <item>Mojokerto</item>
+        <item>Blitar</item>
+        <item>Situbondo</item>
+        <item>Lumajang</item>
+        <item>Pasuruan</item>
     </string-array>
 
     <string-array name="data_persen">
@@ -85,6 +107,12 @@
         <item>Cabai adalah buah dan tumbuhan anggota genus Capsicum. Buahnya dapat digolongkan sebagai sayuran maupun bumbu, tergantung bagaimana pemanfaatannya. Sebagai bumbu, buah cabai yang pedas sangat populer di Asia Tenggara sebagai penguat rasa untuk makanan. Bagi seni masakan Padang, cabai bahkan dianggap sebagai "bahan makanan pokok" kesepuluh (alih-alih kesembilan). Sangat sulit bagi masakan Padang dibuat tanpa cabai.</item>
         <item>Seledri (Apium graveolens L.) adalah sayuran daun dan tumbuhan obat yang biasa digunakan sebagai bumbu masakan. Beberapa negara termasuk Jepang, Cina dan Korea mempergunakan bagian tangkai daun sebagai bahan makanan. Di Indonesia tumbuhan ini diperkenalkan oleh penjajah Belanda dan digunakan daunnya untuk menyedapkan sup atau sebagai lalap.</item>
     </string-array>
+
+<!--    <string-array name="data_result">-->
+<!--        <item>Bayam</item>-->
+<!--        <item>Cabai</item>-->
+<!--        <item>Seledri</item>-->
+<!--    </string-array>-->
 
     <integer-array name="data_result_photo">
         <item>@drawable/bayam</item>
