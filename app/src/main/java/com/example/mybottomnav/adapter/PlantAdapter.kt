@@ -1,11 +1,14 @@
 package com.example.mybottomnav.adapter
 
+import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mybottomnav.R
@@ -42,7 +45,7 @@ class PlantAdapter(private val listPlant: ArrayList<Plant>) : RecyclerView.Adapt
         holder.itemView.setOnClickListener {
             val moveToDetail = Intent (holder.itemView.context, DetailActivity::class.java)
             moveToDetail.putExtra("key_plant", listPlant[holder.adapterPosition])
-            holder.itemView.context.startActivity(moveToDetail)
+            holder.itemView.context.startActivity(moveToDetail, ActivityOptionsCompat.makeSceneTransitionAnimation(holder.itemView.context as Activity).toBundle())
         }
     }
 

@@ -32,7 +32,9 @@
     <string name="result_text">Daftar tanaman yang mungkin cocok</string>
     <string name="login">Login</string>
     <string name="acc_availability">Don`t have an account yet?</string>
+    <string name="acc_availability2">Already have an account?</string>
     <string name="to_register">Sign Up here</string>
+    <string name="to_login">Login Here</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
     <string name="invalid_email">Format alamat email salah</string>

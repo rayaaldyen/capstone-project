@@ -19,7 +19,7 @@
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/loginImage"
+        android:id="@+id/registerImage"
         android:layout_width="wrap_content"
         android:layout_height="350dp"
         android:layout_marginTop="128dp"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:alpha="1"
+        android:alpha="0"
         android:gravity="center"
         android:text="@string/signup"
         android:textSize="32sp"
@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="45dp"
+        android:alpha="0"
         android:layout_marginEnd="8dp"
         android:src="@drawable/ic_account_circle"
         app:layout_constraintEnd_toStartOf="@id/nameEditTextLayout"
@@ -64,7 +65,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="32dp"
-        android:alpha="1"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_register">
@@ -87,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
+        android:alpha="0"
         android:layout_marginEnd="8dp"
         android:src="@drawable/ic_email"
         app:layout_constraintEnd_toStartOf="@id/emailEditTextLayout"
@@ -102,7 +104,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="32dp"
-        android:alpha="1"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout">
@@ -123,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:alpha="0"
         android:layout_marginEnd="16dp"
         android:src="@drawable/ic_baseline_lock_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,7 +140,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="32dp"
-        android:alpha="1"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
@@ -154,36 +157,62 @@
             android:hint="@string/password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/register_agreement"
-        android:layout_width="350dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_director"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/register_agreement"
-        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/signupButton"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/signupButton">
+
+        <TextView
+            android:id="@+id/account_availability2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            android:text="@string/acc_availability2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_login_direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            android:text="@string/to_login"
+            android:textColor="@color/lime_green"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toEndOf="@+id/account_availability2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/signupButton"
         android:layout_width="238dp"
         android:layout_height="36dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:alpha="1"
-        android:enabled="false"
+        android:alpha="0"
         android:background="@drawable/bg_button"
+        android:enabled="false"
         android:text="@string/signup"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_agreement" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"
