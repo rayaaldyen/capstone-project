@@ -14,15 +14,6 @@
             android:layout_height="650dp"
             tools:context=".ui.home.HomeFragment">
 
-            <!--    <ImageView-->
-            <!--        android:id="@+id/imageView2"-->
-            <!--        android:layout_width="match_parent"-->
-            <!--        android:layout_height="560dp"-->
-            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--        app:layout_constraintEnd_toEndOf="parent"-->
-            <!--        app:layout_constraintStart_toStartOf="parent"-->
-            <!--        tools:src="@tools:sample/avatars" />-->
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/backgroundLayout"
@@ -118,7 +109,6 @@
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <!--    </androidx.cardview.widget.CardView>-->
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout

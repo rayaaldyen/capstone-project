@@ -1,5 +1,7 @@
 package com.example.mybottomnav.ui.account
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,9 +21,6 @@ class AccountFragment : Fragment() {
 
     private var _binding: FragmentAccountBinding? = null
     private lateinit var accountViewModel: AccountViewModel
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -32,10 +31,7 @@ class AccountFragment : Fragment() {
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textAccount
-//        accountViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        playAnimation()
         setupViewModel()
         logoutAction()
         return root
@@ -63,5 +59,20 @@ class AccountFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.logoutButton, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, 0f).setDuration(1500).start()
+        ObjectAnimator.ofFloat(binding.ivAccountFragment, View.ALPHA, 1f).setDuration(1500).start()
+
+        val usernameLayout = ObjectAnimator.ofFloat(binding.constraintLayout1, View.ALPHA, 1f).setDuration(300)
+        val emailLayout = ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
+        val passwordLaoyout = ObjectAnimator.ofFloat(binding.constraintLayout3, View.ALPHA, 1f).setDuration(300)
+
+        AnimatorSet().apply {
+            playSequentially(usernameLayout, emailLayout, passwordLaoyout)
+            start()
+        }
     }
 }

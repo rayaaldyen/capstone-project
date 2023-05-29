@@ -1,5 +1,7 @@
 package com.example.mybottomnav.ui.add
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,12 +21,11 @@ class AddFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        val addViewModel =
-//            ViewModelProvider(this).get(AddViewModel::class.java)
 
         _binding = FragmentAddBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        playAnimation()
         binding.predictButton.setOnClickListener {
             startActivity(Intent(activity, ResultActivity::class.java))
         }
@@ -36,5 +37,22 @@ class AddFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.imageView3, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.predictTitle, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f).setDuration(1500).start()
+        val etPH = ObjectAnimator.ofFloat(binding.phEditText, View.ALPHA, 1f).setDuration(300)
+        val etRain = ObjectAnimator.ofFloat(binding.rainEditText, View.ALPHA, 1f).setDuration(300)
+        val etCity = ObjectAnimator.ofFloat(binding.citySelection, View.ALPHA, 1f).setDuration(300)
+        val etSuhu = ObjectAnimator.ofFloat(binding.temperatureEditText, View.ALPHA, 1f).setDuration(300)
+        val btnPredict = ObjectAnimator.ofFloat(binding.predictButton, View.ALPHA, 1f).setDuration(300)
+        val titleInput = ObjectAnimator.ofFloat(binding.textDashboard, View.ALPHA, 1f).setDuration(600)
+
+        AnimatorSet().apply {
+            playSequentially(etPH, etRain, etCity, etSuhu, btnPredict, titleInput)
+            start()
+        }
     }
 }

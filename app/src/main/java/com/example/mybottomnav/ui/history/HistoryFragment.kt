@@ -1,5 +1,7 @@
 package com.example.mybottomnav.ui.history
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +15,6 @@ import com.example.mybottomnav.databinding.FragmentHistoryBinding
 class HistoryFragment : Fragment() {
 
     private var _binding: FragmentHistoryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,15 +28,27 @@ class HistoryFragment : Fragment() {
         _binding = FragmentHistoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        playAnimation()
         val recycleView: RecyclerView = binding.rvPlantsHistory
-//        historyViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.imageView2, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.pageTitle, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f).setDuration(1500).start()
+
+        val rvHistory = ObjectAnimator.ofFloat(binding.rvPlantsHistory, View.ALPHA, 1f).setDuration(300)
+        val seachBar = ObjectAnimator.ofFloat(binding.searchViewContainer, View.ALPHA, 1f).setDuration(600)
+
+        AnimatorSet().apply {
+            playSequentially(rvHistory, seachBar)
+            start()
+        }
     }
 }
