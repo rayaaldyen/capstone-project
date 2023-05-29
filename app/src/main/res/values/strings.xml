@@ -5,8 +5,8 @@
     <string name="title_history">History</string>
     <string name="title_account">Account</string>
     <string name="region">Region</string>
-    <string name="temperature">30°C</string>
-    <string name="type_weather">Heavy Rain</string>
+    <string name="temperature">%s°C</string>
+    <string name="type_weather">Heavy \nRain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
     <string name="popular">Most Popular Horticulture</string>
@@ -46,6 +46,7 @@
     <string name="detail_desc">Detail Description</string>
     <string name="detail_name">Detail Name</string>
     <string name="signup_pass_tittle">Selamat!</string>
+    <string name="permission_rejected">Permisi ditolak</string>
     <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
 
     <string-array name="data_tanaman">

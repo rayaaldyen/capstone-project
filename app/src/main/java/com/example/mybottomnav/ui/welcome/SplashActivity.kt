@@ -10,11 +10,8 @@ import android.os.Looper
 import android.view.View
 import com.example.mybottomnav.MainActivity
 import com.example.mybottomnav.R
-import com.example.mybottomnav.databinding.ActivitySplashBinding
-import com.example.mybottomnav.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
