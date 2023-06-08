@@ -2,7 +2,6 @@ package com.example.mybottomnav.ui.add
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils.replace
@@ -30,7 +29,7 @@ class AddFragment : Fragment() {
         _binding = FragmentAddBinding.inflate(inflater, container, false)
         val root: View = binding.root
         playAnimation()
-        binding.constraintLayout1.setOnClickListener {
+        binding.predictButton.setOnClickListener {
             startActivity(Intent(activity, ResultActivity::class.java))
         }
 
@@ -44,20 +43,18 @@ class AddFragment : Fragment() {
         _binding = null
     }
 
-    @SuppressLint("Recycle")
     private fun playAnimation() {
-            ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(1000).start()
-            ObjectAnimator.ofFloat(binding.predictTitle, View.ALPHA, 1f).setDuration(1000).start()
-            ObjectAnimator.ofFloat(binding.textDashboard, View.ALPHA, 1f).setDuration(1000).start()
+        val title =
+            ObjectAnimator.ofFloat(binding.predictTitle, View.ALPHA, 1f).setDuration(300)
+        val textDashboard =
+            ObjectAnimator.ofFloat(binding.textDashboard, View.ALPHA, 1f).setDuration(300)
+        val icon =
+            ObjectAnimator.ofFloat(binding.predictIcon, View.ALPHA, 1f).setDuration(300)
+        val button =
+            ObjectAnimator.ofFloat(binding.predictButton, View.ALPHA, 1f).setDuration(300)
 
-        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f)
-            .setDuration(1000).start()
-        val recom =
-            ObjectAnimator.ofFloat(binding.constraintLayout1, View.ALPHA, 1f).setDuration(300)
-        val predict =
-            ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
         AnimatorSet().apply {
-            playSequentially(recom, predict)
+            playSequentially(title, textDashboard, icon, button)
             start()
         }
 
