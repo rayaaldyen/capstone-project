@@ -90,12 +90,12 @@
                         android:id="@+id/tv_type_weather"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="7dp"
-                        tools:text="@string/type_weather"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="35dp"
                         android:textColor="@color/dark_gray"
                         app:layout_constraintStart_toEndOf="@+id/tv_temperature"
-                        app:layout_constraintTop_toTopOf="@+id/tv_temperature" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/type_weather" />
 
                     <ImageView
                         android:id="@+id/img_item_photo"
