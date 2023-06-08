@@ -7,20 +7,20 @@ import kotlinx.parcelize.Parcelize
 data class Plant(
     var photoUrl: Int,
     var nama: String,
-    var detail: String
-//    var category: String,
-//    var careLevel: String,
-//    var size: String,
-//    var marketTrend: String
+    var detail: String,
+    var category: String,
+    var careLevel: String,
+    var size: String,
+    var marketTrend: String
 ) :Parcelable{
     constructor(parcel: Parcel) : this(
         (parcel.readValue(Int::class.java.classLoader) as? Int)!!,
         parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
         parcel.readString()!!
-//        parcel.readString()!!,
-//        parcel.readString()!!,
-//        parcel.readString()!!,
-//        parcel.readString()!!
     )
 
     override fun describeContents(): Int {
@@ -31,10 +31,10 @@ data class Plant(
         parcel.writeValue(photoUrl)
         parcel.writeString(nama)
         parcel.writeString(detail)
-//        parcel.writeString(category)
-//        parcel.writeString(careLevel)
-//        parcel.writeString(size)
-//        parcel.writeString(marketTrend)
+        parcel.writeString(category)
+        parcel.writeString(careLevel)
+        parcel.writeString(size)
+        parcel.writeString(marketTrend)
     }
 
     companion object CREATOR : Parcelable.Creator<Plant> {

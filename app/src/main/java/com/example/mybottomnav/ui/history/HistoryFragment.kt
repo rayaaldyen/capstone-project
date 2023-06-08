@@ -47,7 +47,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun showSelectPlant(plant: Plant){
-        val plant = Plant(plant.photoUrl, plant.nama, plant.detail)
+        val plant = Plant(plant.photoUrl, plant.nama, plant.detail, plant.category, plant.careLevel, plant.size, plant.marketTrend)
         val detailActivity = Intent(activity, DetailActivity::class.java)
         detailActivity.putExtra(DetailActivity.EXTRA_PLANT, plant)
         startActivity(detailActivity)
@@ -58,9 +58,13 @@ class HistoryFragment : Fragment() {
         val dataNama = resources.getStringArray(R.array.data_result)
         val dataDesk = resources.getStringArray(R.array.data_deskripsi)
         val dataPhoto = resources.obtainTypedArray(R.array.data_result_photo)
+        val dataCategory = resources.getStringArray(R.array.category)
+        val dataCareLevel = resources.getStringArray(R.array.care_level)
+        val dataSize = resources.getStringArray(R.array.size)
+        val dataMarket = resources.getStringArray(R.array.market_prediction)
         val listPlant = ArrayList<Plant>()
         for(i in dataNama.indices){
-            val plant = Plant( dataPhoto.getResourceId(i, -1), dataNama[i], dataDesk[i])
+            val plant = Plant( dataPhoto.getResourceId(i, -1), dataNama[i], dataDesk[i], dataCategory[i], dataCareLevel[i], dataSize[i], dataMarket[i])
             listPlant.add(plant)
         }
         return listPlant

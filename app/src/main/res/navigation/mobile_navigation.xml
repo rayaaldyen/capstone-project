@@ -15,7 +15,13 @@
         android:id="@+id/navigation_add"
         android:name="com.example.mybottomnav.ui.add.AddFragment"
         android:label="@string/title_add"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.example.mybottomnav.ui.result.ResultFragment"
+        android:label="@string/result"
+        tools:layout="@layout/fragment_result" />
 
     <fragment
         android:id="@+id/navigation_history"

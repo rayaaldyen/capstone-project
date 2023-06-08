@@ -2,26 +2,18 @@ package com.example.mybottomnav.ui.home
 
 
 import android.Manifest
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Location
-
-import android.animation.Animator
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.graphics.*
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-
-import com.google.android.gms.location.LocationServices
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,15 +22,14 @@ import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.FragmentHomeBinding
 import com.example.mybottomnav.dummy.adapter.ListTanamanAdapter
 import com.example.mybottomnav.dummy.data.Tanaman
+import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.*
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.lang.Exception
 import java.net.HttpURLConnection
 import java.net.URL
 import java.text.DecimalFormat
-import com.google.android.material.color.utilities.MaterialDynamicColors.background
 
 
 class HomeFragment : Fragment() {
@@ -52,7 +43,7 @@ class HomeFragment : Fragment() {
     private val list = ArrayList<Tanaman>()
 
     private val locationPermission = Manifest.permission.ACCESS_FINE_LOCATION
-    private val locationPermissionRequestCode = 10
+    private val locationPermissionRequestCode = 123
 
     private val API_KEY = "e61e1a9320bdb4be62e48baf4ef114b5"
 
@@ -77,35 +68,13 @@ class HomeFragment : Fragment() {
         tvRegion = binding.tvRegion
         tvWeather = binding.tvTypeWeather
 
-
-
-
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        fetchWeatherData(26.630580, -81.849468)
-//        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
         startLocationUpdates()
-//        if (ContextCompat.checkSelfPermission(
-//                requireContext(),
-//                locationPermission
-//            ) == PackageManager.PERMISSION_GRANTED
-//        ) {
-//            fusedLocationClient.lastLocation
-//                .addOnSuccessListener { location: Location? ->
-//                    location?.let {
-//                        val latitude = location.latitude
-//                        val longitude = location.longitude
-//
-//                        fetchWeatherData(latitude, longitude)
-//                    }
-//                }
-//        } else {
-//            reqLocationPermission()
-//        }
+
     }
 
 
@@ -117,21 +86,6 @@ class HomeFragment : Fragment() {
         )
     }
 
-//    @Deprecated("Deprecated in Java")
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<String>,
-//        grantResults: IntArray
-//    ) {
-//        if (requestCode == locationPermissionRequestCode) {
-//            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                // Permission granted, request location updates
-////                startLocationUpdates()
-//            } else {
-//                // Permission denied, handle accordingly
-//            }
-//        }
-//    }
 
     private fun startLocationUpdates() {
         val fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
@@ -155,6 +109,7 @@ class HomeFragment : Fragment() {
     }
 
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun fetchWeatherData(latitude: Double, longitude: Double) {
         GlobalScope.launch(Dispatchers.IO) {
             val apiUrl =
@@ -253,21 +208,26 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-        private fun playAnimation() {
-            ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(1000).start()
-            ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f)
-                .setDuration(1000).start()
-            val weather =
-                ObjectAnimator.ofFloat(binding.constraintLayout, View.ALPHA, 1f).setDuration(300)
-            val tvPopular =
-                ObjectAnimator.ofFloat(binding.textView, View.ALPHA, 1f).setDuration(300)
-            val popular =
-                ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
-
-            AnimatorSet().apply {
-                playSequentially(weather, tvPopular, popular)
-                start()
-            }
-
-        }
+    override fun onResume() {
+        super.onResume()
+        startLocationUpdates()
     }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, -50f)
+            .setDuration(1000).start()
+        val weather =
+            ObjectAnimator.ofFloat(binding.constraintLayout, View.ALPHA, 1f).setDuration(300)
+        val tvPopular =
+            ObjectAnimator.ofFloat(binding.textView, View.ALPHA, 1f).setDuration(300)
+        val popular =
+            ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
+
+        AnimatorSet().apply {
+            playSequentially(weather, tvPopular, popular)
+            start()
+        }
+
+    }
+}
