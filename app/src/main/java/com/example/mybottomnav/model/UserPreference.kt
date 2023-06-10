@@ -1,61 +1,44 @@
 package com.example.mybottomnav.model
 
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.booleanPreferencesKey
-import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.core.stringPreferencesKey
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
+import android.content.Context
 
-class UserPreference private constructor(private val dataStore: DataStore<androidx.datastore.preferences.core.Preferences>) {
+class UserPreference(context: Context) {
 
-    fun getUser(): Flow<UserModel> {
-        return dataStore.data.map { preferences ->
-            UserModel(
-                preferences[NAME_KEY] ?:"",
-                preferences[EMAIL_KEY] ?:"",
-                preferences[PASSWORD_KEY] ?:"",
-                preferences[STATE_KEY] ?: false
-            )
-        }
-    }
-
-    suspend fun saveUser(user: UserModel) {
-        dataStore.edit { preferences ->
-            preferences[NAME_KEY] = user.name
-            preferences[EMAIL_KEY] = user.email
-            preferences[PASSWORD_KEY] = user.password
-            preferences[STATE_KEY] = user.isLogin
-        }
-    }
-
-    suspend fun login() {
-        dataStore.edit { preferences ->
-            preferences[STATE_KEY] = true
-        }
-    }
-
-    suspend fun logout() {
-        dataStore.edit { preferences ->
-            preferences[STATE_KEY] = false
-        }
-    }
+    private val preference = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
     companion object {
-        @Volatile
-        private var INSTANCE: UserPreference? = null
-
-        private val NAME_KEY = stringPreferencesKey("name")
-        private val EMAIL_KEY = stringPreferencesKey("email")
-        private val PASSWORD_KEY = stringPreferencesKey("password")
-        private val STATE_KEY = booleanPreferencesKey("state")
-
-        fun getInstance(dataStore: DataStore<androidx.datastore.preferences.core.Preferences>): UserPreference {
-            return INSTANCE ?: synchronized(this) {
-                val instance = UserPreference(dataStore)
-                INSTANCE = instance
-                instance
-            }
-        }
+        private const val PREF_NAME = "user_pref"
+        private const val ID = "id"
+        private const val USERNAME = "username"
+        private const val EMAIL = "email"
+        private const val PASSWORD = "password"
+        private const val TOKEN = "token"
     }
+
+    fun getUser(): UserLoginModel {
+        val id = preference.getString(ID, null)?.toInt()
+        val username = preference.getString(USERNAME, null)
+        val email = preference.getString(EMAIL, null)
+        val password = preference.getString(PASSWORD, null)
+        val token = preference.getString(TOKEN, null)
+        return UserLoginModel(id, username, email, password, token)
+    }
+
+    fun saveUser(user: UserLoginModel) {
+        val edit = preference.edit()
+        edit.putString(ID, user.id.toString())
+        edit.putString(USERNAME, user.username)
+        edit.putString(EMAIL, user.email)
+        edit.putString(PASSWORD, user.password)
+        edit.putString(TOKEN, user.token)
+        edit.apply()
+    }
+
+
+    fun logout() {
+        val edit = preference.edit().clear()
+        edit.apply()
+    }
+
+
 }
