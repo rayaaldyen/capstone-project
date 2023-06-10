@@ -17,7 +17,6 @@ import com.example.mybottomnav.databinding.ActivityMainBinding
 import com.example.mybottomnav.model.UserPreference
 import com.example.mybottomnav.ui.login.LoginActivity
 
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-
+        setupViewModel()
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -40,19 +39,21 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        setupViewModel()
+        loggedInCheck()
     }
+
+    private fun loggedInCheck() {
+        val userPref = UserPreference(this)
+        if (userPref.getUser().id == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+
+    }
+
     private fun setupViewModel() {
         mainViewModel = ViewModelProvider(
-            this,
-            ViewModelFactory(UserPreference.getInstance(dataStore))
+            this
         )[MainViewModel::class.java]
-
-        mainViewModel.getUser().observe(this) { user ->
-            if (!user.isLogin) {
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            }
-        }
     }
 }

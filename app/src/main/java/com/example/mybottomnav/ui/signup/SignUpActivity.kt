@@ -2,39 +2,42 @@ package com.example.mybottomnav.ui.signup
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Context
 import android.content.Intent
-import android.icu.lang.UCharacter.GraphemeClusterBreak.L
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.R
-import com.example.mybottomnav.ViewModelFactory
 import com.example.mybottomnav.databinding.ActivitySignUpBinding
-import com.example.mybottomnav.model.UserModel
-import com.example.mybottomnav.model.UserPreference
 import com.example.mybottomnav.ui.login.LoginActivity
 import com.example.storyapp.utils.isEmailValid
 import com.example.storyapp.utils.isPasswordValid
 
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
-    private lateinit var signUpViewModel: SignupViewModel
+    private lateinit var signUpViewModel: SignUpViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setupViewModel()
+        signUpViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+        signUpViewModel.error.observe(this) { isError ->
+            if (isError) {
+                errorMessage()
+            }
+        }
+        signUpViewModel.isRegistered.observe(this) {
+            isRegister(it)
+        }
         binding.tvLoginDirect.setOnClickListener {
             val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
             startActivity(intent)
@@ -43,17 +46,30 @@ class SignUpActivity : AppCompatActivity() {
         playAnimation()
         emailHandler()
         buttonHandler()
+        setupAction()
         passwordHandler()
-        setupViewModel()
+
     }
 
     private fun buttonHandler() {
-        val username = binding.nameEditText.text.toString()
+        val name = binding.nameEditText.text.toString()
         val email = binding.emailEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
-        binding.signupButton.isEnabled = !TextUtils.isEmpty(username) && isEmailValid(email) && isPasswordValid(password)
+        binding.signupButton.isEnabled =
+            !TextUtils.isEmpty(name) && isEmailValid(email) && isPasswordValid(password)
+
+    }
+    private fun setupAction() {
         binding.signupButton.setOnClickListener {
-            signUpViewModel.saveUser(UserModel(username, email, password, false))
+            val name = binding.nameEditText.text.toString()
+            val email = binding.emailEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+            signUpViewModel.userSignUp(name, email, password)
+        }
+    }
+
+    private fun isRegister(isRegistered: Boolean) {
+        if (isRegistered) {
             AlertDialog.Builder(this).apply {
                 setTitle(getString(R.string.signup_pass_tittle))
                 setMessage(getString(R.string.signup_successfully))
@@ -68,6 +84,17 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+            binding.progressBar.bringToFront()
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
+    }
+
     private fun emailHandler() {
         binding.emailEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -104,9 +131,16 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         signUpViewModel = ViewModelProvider(
-            this,
-            ViewModelFactory(UserPreference.getInstance(dataStore))
-        )[SignupViewModel::class.java]
+            this
+        )[SignUpViewModel::class.java]
+    }
+    private fun errorMessage() {
+        Toast.makeText(
+            this@SignUpActivity,
+            getString(R.string.signup_failed),
+            Toast.LENGTH_SHORT
+        )
+            .show()
     }
 
     private fun playAnimation(){

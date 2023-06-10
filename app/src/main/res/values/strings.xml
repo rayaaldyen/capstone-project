@@ -34,6 +34,8 @@
     <string name="acc_availability">Don`t have an account yet?</string>
     <string name="acc_availability2">Already have an account?</string>
     <string name="to_register">Sign Up here</string>
+    <string name="recommendation_text">Rekomendasi Tanaman</string>
+    <string name="predict_text">Prediksi Harga</string>
     <string name="to_login">Login Here</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
@@ -52,6 +54,9 @@
     <string name="care_level">Care Level</string>
     <string name="size">Size</string>
     <string name="result">Hasil</string>
+    <string name="alert_login">Login failed</string>
+    <string name="back">Back</string>
+    <string name="login_invalid">Make sure the email or password you entered is correct</string>
     <string name="market_price_prediction">Market Price Prediction</string>
 
     <string-array name="data_tanaman">

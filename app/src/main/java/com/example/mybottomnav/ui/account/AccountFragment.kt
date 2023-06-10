@@ -1,6 +1,7 @@
 package com.example.mybottomnav.ui.account
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.ViewModelFactory
 import com.example.mybottomnav.databinding.FragmentAccountBinding
 import com.example.mybottomnav.model.UserPreference
+import com.example.mybottomnav.ui.login.LoginActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class AccountFragment : Fragment() {
@@ -38,19 +40,20 @@ class AccountFragment : Fragment() {
 
     private fun setupViewModel() {
         accountViewModel = ViewModelProvider(
-            this,
-            ViewModelFactory(UserPreference.getInstance(requireContext().dataStore))
+            this
         )[AccountViewModel::class.java]
 
-        accountViewModel.getUser().observe(viewLifecycleOwner) { user ->
-            binding.tvUsername.text = user.name
-            binding.tvEmail.text = user.email
-            binding.tvPassword.text = user.password.replace("[a-zA-Z0-9]".toRegex(), "*")
+            binding.tvUsername.text = accountViewModel.getUser().username
+            binding.tvEmail.text = accountViewModel.getUser().email
+            binding.tvPassword.text =
+                accountViewModel.getUser().password?.replace("[a-zA-Z0-9]".toRegex(), "*")
         }
-    }
     private fun logoutAction() {
         binding.logoutButton.setOnClickListener {
             accountViewModel.logout()
+            Intent(activity, LoginActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
 

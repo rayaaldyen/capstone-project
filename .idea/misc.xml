@@ -36,11 +36,14 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/fragment_account.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/bg_button.xml" value="0.149" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/bg_layout_detail.xml" value="0.207" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/gradient_lime_to_blue.xml" value="0.338" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/gradient_lime_to_yellow.xml" value="0.338" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/item_bg.xml" value="0.207" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_detail.xml" value="0.33" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_login.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_result.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_sign_up.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/fragment_account.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/fragment_add.xml" value="0.23229166666666667" />
