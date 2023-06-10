@@ -53,6 +53,8 @@
     <string name="size">Size</string>
     <string name="result">Hasil</string>
     <string name="market_price_prediction">Market Price Prediction</string>
+    <string name="recommendation_text">Rekomendasi Tanaman</string>
+    <string name="predict_text">Prediksi Harga</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>
