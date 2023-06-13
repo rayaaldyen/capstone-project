@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mybottomnav.databinding.FragmentAddBinding
+import com.example.mybottomnav.ui.predict.PredictActivity
 import com.example.mybottomnav.ui.recommendation.RecommendationActivity
 
 class AddFragment : Fragment() {
@@ -28,6 +29,9 @@ class AddFragment : Fragment() {
         playAnimation()
         binding.constraintLayout1.setOnClickListener {
             startActivity(Intent(activity, RecommendationActivity::class.java))
+        }
+        binding.constraintLayout2.setOnClickListener {
+            startActivity(Intent(activity, PredictActivity::class.java))
         }
 
         return root

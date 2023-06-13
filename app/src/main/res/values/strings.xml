@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">My Bottom Nav</string>
+    <string name="app_name">BotaniPlan</string>
     <string name="title_home">Home</string>
     <string name="title_add">Add</string>
     <string name="title_history">History</string>
@@ -9,6 +9,9 @@
     <string name="type_weather">Heavy Rain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
+    <string name="predict_text" tools:ignore="ExtraTranslation">Prediksi Harga</string>
+    <string name="prediksi" tools:ignore="ExtraTranslation">Prediksi</string>
+    <string name="empty_data" tools:ignore="ExtraTranslation">Data tidak ditemukan</string>
     <string name="popular">Most Popular Horticulture</string>
     <string name="logout">Logout</string>
     <string name="username_layout">Username</string>
@@ -38,8 +41,10 @@
     <string name="to_login">Login Here</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
+    <string name="konsumsi" tools:ignore="ExtraTranslation">Dikonsumsi di Indonesia dalam Ribu Ton (2021)</string>
     <string name="invalid_email">Format alamat email salah</string>
     <string name="api_key">e61e1a9320bdb4be62e48baf4ef114b5</string>
+    <string name="recomendation_failed">Proses pencarian tanaman gagal, mohon coba lagi</string>
     <string name="error_password">Panjang karakter password minimal 8 karakter atau lebih</string>
     <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
     <string name="signup_failed">Terjadi kesalahan ketika memasukkan data</string>
@@ -57,13 +62,6 @@
     <string name="alert_login">Login gagal</string>
     <string name="back">Back</string>
     <string name="login_invalid">Pastikan email atau password yang Anda masukkan benar</string>
-    <string name="category">Category</string>
-    <string name="care_level">Care Level</string>
-    <string name="size">Size</string>
-    <string name="result">Hasil</string>
-    <string name="alert_login">Login failed</string>
-    <string name="back">Back</string>
-    <string name="login_invalid">Make sure the email or password you entered is correct</string>
     <string name="market_price_prediction">Market Price Prediction</string>
     <string name="plant_type">Jenis Tanaman</string>
     <string name="harvest_area">Luas Panen</string>
