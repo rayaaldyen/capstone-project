@@ -48,8 +48,7 @@ class AccountFragment : Fragment() {
 
             binding.tvUsername.text = accountViewModel.getUser().username
             binding.tvEmail.text = accountViewModel.getUser().email
-            binding.tvPassword.text =
-                accountViewModel.getUser().password?.replace("[a-zA-Z0-9]".toRegex(), "*")
+
         }
     private fun logoutAction() {
         binding.logoutButton.setOnClickListener {
@@ -75,10 +74,8 @@ class AccountFragment : Fragment() {
             ObjectAnimator.ofFloat(binding.constraintLayout1, View.ALPHA, 1f).setDuration(300)
         val email =
             ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
-        val password =
-            ObjectAnimator.ofFloat(binding.constraintLayout3, View.ALPHA, 1f).setDuration(300)
         AnimatorSet().apply {
-            playSequentially(username, email, password)
+            playSequentially(username, email)
             start()
         }
     }

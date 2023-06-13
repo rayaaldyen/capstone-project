@@ -54,65 +54,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:alpha="0"
-        android:layout_width="302dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_layout"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-
-        <TextView
-            android:id="@+id/tv_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="1dp"
-            android:text="@string/password"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/iv_password"
-            app:layout_constraintTop_toBottomOf="@+id/tv_password_layout" />
-
-        <TextView
-            android:id="@+id/tv_password_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/password_layout"
-            android:textColor="@color/dark_gray"
-            app:layout_constraintStart_toEndOf="@+id/iv_password"
-            app:layout_constraintTop_toTopOf="@+id/iv_password" />
-
-        <ImageView
-            android:id="@+id/iv_password"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="1dp"
-            android:src="@drawable/ic_lock_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_change_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/change"
-            android:textColor="@color/lime_green"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:alpha="0"
         android:layout_width="302dp"
@@ -188,17 +129,17 @@
         android:id="@+id/backgroundLayout"
         android:layout_width="match_parent"
         android:layout_height="325dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="272dp"
         android:background="@drawable/gradient_light_gray"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp">
 
         <ImageView
             android:id="@+id/iv_account_fragment"
-            android:alpha="0"
             android:layout_width="313dp"
             android:layout_height="313dp"
             android:layout_marginTop="8dp"
+            android:alpha="0"
             android:src="@drawable/account_pic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
