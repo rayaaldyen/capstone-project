@@ -24,9 +24,7 @@ class ResultActivity : AppCompatActivity() {
         val recommendations = intent.getStringArrayExtra("RESULT")?.toList() as MutableList<String>
         showRecyclerList(recommendations)
         playAnimation()
-        binding.buttonBack.setOnClickListener {
-            onBackPressed()
-        }
+        backButtonPressed()
     }
 
     private fun showRecyclerList(recommendations: List<String>) {
@@ -51,6 +49,12 @@ class ResultActivity : AppCompatActivity() {
         binding.emptyIcon.visibility = View.VISIBLE
         binding.tvEmpty.visibility = View.VISIBLE
         binding.textResult.visibility = View.GONE
+    }
+
+    private fun backButtonPressed() {
+        binding.buttonBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun playAnimation() {

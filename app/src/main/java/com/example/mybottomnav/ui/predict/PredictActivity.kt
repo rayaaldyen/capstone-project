@@ -31,9 +31,11 @@ class PredictActivity : AppCompatActivity() {
         customEditTextKuantitas = binding.areaEditText
         customEditTextLuas = binding.quantityEditText
 
+
         setupViewModel()
         predictAction()
         setMyButtonEnable()
+        backButtonPressed()
 
         customEditTextKuantitas.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
@@ -63,6 +65,12 @@ class PredictActivity : AppCompatActivity() {
         predictViewModel = ViewModelProvider(
             this
         )[PredictViewModel::class.java]
+    }
+
+    private fun backButtonPressed() {
+        binding.buttonBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {

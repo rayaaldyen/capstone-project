@@ -34,6 +34,7 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/MyBottomNav/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project3/app/src/main/res/layout/fragment_account.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/arrow_back.xml" value="0.32" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/bg_button.xml" value="0.149" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/bg_layout_detail.xml" value="0.207" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/drawable/gradient_clear_sky.xml" value="0.332" />
@@ -49,6 +50,7 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_predict.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_recommendation.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_result.xml" value="0.2" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/activity_sign_up.xml" value="0.34479166666666666" />
@@ -61,6 +63,7 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/fragment_recommendation.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/fragment_result.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/item_popular_plant.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/item_result_plant.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/layout/plant_item.xml" value="0.31094527363184077" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/menu/bottom_nav_menu.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/capstone-project4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.214" />

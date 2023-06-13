@@ -27,9 +27,7 @@ class DetailActivity : AppCompatActivity() {
             this
         )[PlantsViewModel::class.java]
 
-        binding.buttonBack.setOnClickListener {
-            onBackPressed()
-        }
+        backButtonPressed()
 
         val tvDetailNama = binding.tvNameDetail
         val tvDetailDesc = binding.tvDescDetail
@@ -94,6 +92,12 @@ class DetailActivity : AppCompatActivity() {
             binding.backgroundLayout.visibility = View.VISIBLE
             binding.infoContainer.visibility = View.VISIBLE
             playAnimation()
+        }
+    }
+
+    private fun backButtonPressed() {
+        binding.buttonBack.setOnClickListener {
+            onBackPressed()
         }
     }
 

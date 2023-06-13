@@ -34,12 +34,11 @@ class RecommendationActivity : AppCompatActivity() {
 
         setupViewModel()
         playAnimation()
+        backButtonPressed()
         binding.predictButton.setOnClickListener {
             recommendation()
         }
-        binding.buttonBack.setOnClickListener {
-            onBackPressed()
-        }
+
     }
 
     private fun reqLocationPermission() {
@@ -106,6 +105,12 @@ class RecommendationActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private fun backButtonPressed() {
+        binding.buttonBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {
