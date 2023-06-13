@@ -36,11 +36,11 @@ class CustomButton : AppCompatButton {
         setTextColor(txtColor)
         textSize = 12f
         gravity = Gravity.CENTER
-        text = context.resources.getString(R.string.logout)
     }
 
     private fun init() {
         txtColor = ContextCompat.getColor(context, android.R.color.background_light)
         enabledButton = ContextCompat.getDrawable(context, R.drawable.bg_button) as Drawable
+        disabledButton = ContextCompat.getDrawable(context, R.drawable.bg_button_disable) as Drawable
     }
 }

@@ -18,9 +18,9 @@ class ListTanamanAdapter(private val listTanaman: ArrayList<Tanaman>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, percent) = listTanaman[position]
-        holder.tvName.text = name
-        holder.tvPercent.text = percent
+        val (nama, angka) = listTanaman[position]
+        holder.tvName.text = nama
+        holder.tvPercent.text = angka
     }
 
     interface OnItemClickCallback {

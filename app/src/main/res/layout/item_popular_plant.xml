@@ -22,7 +22,7 @@
             android:id="@+id/tv_plant_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:textSize="20sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
@@ -38,8 +38,6 @@
             android:textSize="20sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.606"
-            card_view:layout_constraintStart_toEndOf="@+id/tv_plant_name"
             card_view:layout_constraintTop_toTopOf="@+id/tv_plant_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

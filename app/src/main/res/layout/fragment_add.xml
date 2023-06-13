@@ -81,7 +81,7 @@
                         android:layout_height="69dp"
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="20dp"
-                        android:text="@string/predict_text"
+                        android:text="@string/title_predict"
                         android:textColor="@color/dark_gray"
                         android:textSize="20sp"
                         android:textStyle="bold"

@@ -9,7 +9,7 @@
     <string name="type_weather">Heavy \nRain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
-    <string name="popular">Most Popular Horticulture</string>
+    <string name="konsumsi">Dikonsumsi di Indonesia dalam Ribu Ton (2021)</string>
     <string name="logout">Logout</string>
     <string name="username_layout">Username</string>
     <string name="email_layout">Email</string>
@@ -26,7 +26,7 @@
     <string name="ph_tanah">PH Tanah</string>
     <string name="curah_hujan">Curah Hujan</string>
     <string name="suhu">Suhu</string>
-    <string name="prediksi">Prediksi</string>
+    <string name="predict">Prediksi</string>
     <string name="mulai_prediksi">Mulai Prediksi</string>
     <string name="hasil_prediksi">Hasil Prediksi</string>
     <string name="result_text">Daftar tanaman yang mungkin cocok</string>
@@ -35,7 +35,6 @@
     <string name="acc_availability2">Already have an account?</string>
     <string name="to_register">Sign Up here</string>
     <string name="recommendation_text">Rekomendasi Tanaman</string>
-    <string name="predict_text">Prediksi Harga</string>
     <string name="to_login">Login Here</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
@@ -58,21 +57,26 @@
     <string name="back">Back</string>
     <string name="login_invalid">Make sure the email or password you entered is correct</string>
     <string name="market_price_prediction">Market Price Prediction</string>
+    <string name="plant_type">Jenis Tanaman</string>
+    <string name="harvest_area">Luas Panen</string>
+    <string name="quantity">Kuantitas Panen</string>
+    <string name="area">Pilih Daerah</string>
+    <string name="title_predict">Prediksi Harga</string>
+    <string name="rupiah">Rp.</string>
+    <string name="nominal">_</string>
+    <string name="hectar">(hektar)</string>
+    <string name="kwintal">(kuintal)</string>
+    <string name="password_reminder">Minimal 8 Karakter</string>
 
     <string-array name="data_tanaman">
-        <item>Tomat</item>
         <item>Cabai</item>
-        <item>Bawang</item>
-        <item>Bayam</item>
-        <item>Seledri</item>
-        <item>Kacang</item>
-        <item>Selada</item>
-        <item>Timun</item>
-        <item>Pakcoy</item>
+        <item>Kentang</item>
+        <item>Kubis</item>
+        <item>Bawang Merah</item>
+        <item>Bawang Putih</item>
     </string-array>
 
     <string-array name="data_kota">
-        <item>Pilih Kota/Kabupaten</item>
         <item>Malang</item>
         <item>Surabaya</item>
         <item>Banyuwangi</item>
@@ -89,18 +93,19 @@
         <item>Pasuruan</item>
     </string-array>
 
-    <string-array name="data_persen">
-        <item>50%</item>
-        <item>47%</item>
-        <item>44%</item>
-        <item>39%</item>
-        <item>37%</item>
-        <item>30%</item>
-        <item>25%</item>
-        <item>19%</item>
-        <item>10%</item>
+    <string-array name="data_konsumsi_tanaman">
+        <item>Cabai</item>
+        <item>Kentang</item>
+        <item>Bawang Merah</item>
+        <item>Bawang Putih</item>
     </string-array>
 
+    <string-array name="data_konsumsi_angka">
+        <item>528,14</item>
+        <item>771,46</item>
+        <item>790,63</item>
+        <item>506,42</item>
+    </string-array>
 
     <string-array name="data_result">
         <item>Bayam</item>
@@ -135,11 +140,11 @@
         <item>Seledri (Apium graveolens L.) adalah sayuran daun dan tumbuhan obat yang biasa digunakan sebagai bumbu masakan. Beberapa negara termasuk Jepang, Cina dan Korea mempergunakan bagian tangkai daun sebagai bahan makanan. Di Indonesia tumbuhan ini diperkenalkan oleh penjajah Belanda dan digunakan daunnya untuk menyedapkan sup atau sebagai lalap.</item>
     </string-array>
 
-<!--    <string-array name="data_result">-->
-<!--        <item>Bayam</item>-->
-<!--        <item>Cabai</item>-->
-<!--        <item>Seledri</item>-->
-<!--    </string-array>-->
+    <!--    <string-array name="data_result">-->
+    <!--        <item>Bayam</item>-->
+    <!--        <item>Cabai</item>-->
+    <!--        <item>Seledri</item>-->
+    <!--    </string-array>-->
 
     <integer-array name="data_result_photo">
         <item>@drawable/bayam</item>

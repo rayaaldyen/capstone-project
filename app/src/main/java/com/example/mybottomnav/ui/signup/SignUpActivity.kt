@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.R
+import com.example.mybottomnav.custom.CustomButton
 import com.example.mybottomnav.databinding.ActivitySignUpBinding
 import com.example.mybottomnav.ui.login.LoginActivity
 import com.example.storyapp.utils.isEmailValid
@@ -21,11 +22,14 @@ import com.example.storyapp.utils.isPasswordValid
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var signUpViewModel: SignUpViewModel
+    private lateinit var customButton: CustomButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        customButton = binding.signupButton
         setupViewModel()
         signUpViewModel.isLoading.observe(this) {
             showLoading(it)
@@ -55,7 +59,7 @@ class SignUpActivity : AppCompatActivity() {
         val name = binding.nameEditText.text.toString()
         val email = binding.emailEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
-        binding.signupButton.isEnabled =
+        customButton.isEnabled =
             !TextUtils.isEmpty(name) && isEmailValid(email) && isPasswordValid(password)
 
     }

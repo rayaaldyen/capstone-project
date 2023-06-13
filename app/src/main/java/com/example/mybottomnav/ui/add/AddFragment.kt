@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.FragmentAddBinding
+import com.example.mybottomnav.ui.predict.PredictActivity
 import com.example.mybottomnav.ui.result.ResultActivity
 import com.example.mybottomnav.ui.result.ResultFragment
 
@@ -32,6 +33,9 @@ class AddFragment : Fragment() {
         playAnimation()
         binding.constraintLayout1.setOnClickListener {
             startActivity(Intent(activity, ResultActivity::class.java))
+        }
+        binding.constraintLayout2.setOnClickListener {
+            startActivity(Intent(activity, PredictActivity::class.java))
         }
 
         return root

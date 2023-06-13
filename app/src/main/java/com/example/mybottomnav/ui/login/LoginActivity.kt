@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.MainActivity
 import com.example.mybottomnav.R
 import com.example.mybottomnav.ViewModelFactory
+import com.example.mybottomnav.custom.CustomButton
 import com.example.mybottomnav.data.remote.user.LoginResponse
 import com.example.mybottomnav.databinding.ActivityLoginBinding
 import com.example.mybottomnav.model.UserLoginModel
@@ -31,12 +32,14 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var loginViewModel: LoginViewModel
+    private lateinit var customButton: CustomButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        customButton = binding.loginButton
         setupViewModel()
         playAnimation()
         buttonEnable()
@@ -64,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
     private fun buttonEnable() {
         val username = binding.usernameEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
-        binding.loginButton.isEnabled = !TextUtils.isEmpty(username) && isPasswordValid(password)
+        customButton.isEnabled = !TextUtils.isEmpty(username) && isPasswordValid(password)
     }
 
     private fun setupViewModel() {

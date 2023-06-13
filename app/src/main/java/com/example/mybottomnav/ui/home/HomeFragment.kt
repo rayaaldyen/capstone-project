@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
     private val locationPermission = Manifest.permission.ACCESS_FINE_LOCATION
     private val locationPermissionRequestCode = 123
 
-    private val API_KEY = "e61e1a9320bdb4be62e48baf4ef114b5"
+    private val API_KEY = "f3dca65cffdf7a48422a681f0f49b7e0"
 
 
     override fun onCreateView(
@@ -186,8 +186,8 @@ class HomeFragment : Fragment() {
 
     @SuppressLint("Recycle")
     private fun getListTanaman(): ArrayList<Tanaman> {
-        val dataName = resources.getStringArray(R.array.data_tanaman)
-        val dataPercent = resources.getStringArray(R.array.data_persen)
+        val dataName = resources.getStringArray(R.array.data_konsumsi_tanaman)
+        val dataPercent = resources.getStringArray(R.array.data_konsumsi_angka)
         val listTanaman = ArrayList<Tanaman>()
         for (i in dataName.indices) {
             val tanam = Tanaman(dataName[i], dataPercent[i])

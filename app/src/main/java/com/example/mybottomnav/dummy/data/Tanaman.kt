@@ -4,18 +4,19 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Tanaman(
-    val name: String?,
-    val percent: String?): Parcelable{
+    val nama: String?,
+    val angka: String?,
+    ): Parcelable{
         constructor(parcel: Parcel): this(
             parcel.readString(),
-            parcel.readString()
+            parcel.readString(),
         ){
 
         }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(name)
-        parcel.writeString(percent)
+        parcel.writeString(nama)
+        parcel.writeString(angka)
     }
 
     override fun describeContents(): Int {

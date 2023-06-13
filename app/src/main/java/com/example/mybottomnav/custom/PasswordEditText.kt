@@ -41,9 +41,10 @@ class PasswordEditText : AppCompatEditText {
 
                 if (isPasswordValid(password)) {
                     this@PasswordEditText.error = null
-                } else {
-                    this@PasswordEditText.error = context.getString(R.string.error_password)
                 }
+//                else {
+//                    this@PasswordEditText.error = context.getString(R.string.error_password)
+//                }
             }
 
         })

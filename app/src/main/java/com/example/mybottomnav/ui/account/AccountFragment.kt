@@ -1,5 +1,7 @@
 package com.example.mybottomnav.ui.account
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -32,6 +34,7 @@ class AccountFragment : Fragment() {
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        playAnimation()
         setupViewModel()
         logoutAction()
         return root
@@ -60,5 +63,23 @@ class AccountFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.imageView, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.logoutButton, View.ALPHA, 1f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.backgroundLayout, View.TRANSLATION_Y, 400f, 0f).setDuration(1000).start()
+        ObjectAnimator.ofFloat(binding.ivAccountFragment, View.ALPHA, 1f).setDuration(300).start()
+
+        val username =
+            ObjectAnimator.ofFloat(binding.constraintLayout1, View.ALPHA, 1f).setDuration(300)
+        val email =
+            ObjectAnimator.ofFloat(binding.constraintLayout2, View.ALPHA, 1f).setDuration(300)
+        val password =
+            ObjectAnimator.ofFloat(binding.constraintLayout3, View.ALPHA, 1f).setDuration(300)
+        AnimatorSet().apply {
+            playSequentially(username, email, password)
+            start()
+        }
     }
 }
