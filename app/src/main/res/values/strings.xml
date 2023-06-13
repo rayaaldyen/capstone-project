@@ -5,11 +5,11 @@
     <string name="title_history">History</string>
     <string name="title_account">Account</string>
     <string name="region">Region</string>
-    <string name="temperature">%s°C</string>
-    <string name="type_weather">Heavy \nRain</string>
+    <string name="temperature">30°C</string>
+    <string name="type_weather">Heavy Rain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
-    <string name="konsumsi">Dikonsumsi di Indonesia dalam Ribu Ton (2021)</string>
+    <string name="popular">Most Popular Horticulture</string>
     <string name="logout">Logout</string>
     <string name="username_layout">Username</string>
     <string name="email_layout">Email</string>
@@ -39,16 +39,24 @@
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
     <string name="invalid_email">Format alamat email salah</string>
-    <string name="error_password">Password length must be at least 8 characters or more</string>
+    <string name="api_key">e61e1a9320bdb4be62e48baf4ef114b5</string>
+    <string name="error_password">Panjang karakter password minimal 8 karakter atau lebih</string>
     <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
-    <string name="signup_failed">There is an error while entering the data</string>
-    <string name="register_agreement">By signing up, you’re agree to our Terms &amp; Conditions and Privacy Policy</string>
+    <string name="signup_failed">Terjadi kesalahan ketika memasukkan data</string>
+    <string name="register_agreement">Dengan mendaftar, Anda menyetujui Persyaratan &amp; Ketentuan dan Kebijakan Privasi</string>
     <string name="detail_tanaman">Detail Tanaman</string>
-    <string name="detail_desc">Detail Description</string>
-    <string name="detail_name">Detail Name</string>
+    <string name="detail_desc">Detail Deskripsi</string>
+    <string name="detail_name">Detail Nama</string>
     <string name="signup_pass_tittle">Selamat!</string>
     <string name="permission_rejected">Permisi ditolak</string>
     <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
+    <string name="category">Category</string>
+    <string name="care_level">Care Level</string>
+    <string name="size">Size</string>
+    <string name="result">Hasil</string>
+    <string name="alert_login">Login gagal</string>
+    <string name="back">Back</string>
+    <string name="login_invalid">Pastikan email atau password yang Anda masukkan benar</string>
     <string name="category">Category</string>
     <string name="care_level">Care Level</string>
     <string name="size">Size</string>
@@ -100,12 +108,14 @@
         <item>Bawang Putih</item>
     </string-array>
 
+
     <string-array name="data_konsumsi_angka">
         <item>528,14</item>
         <item>771,46</item>
         <item>790,63</item>
         <item>506,42</item>
     </string-array>
+
 
     <string-array name="data_result">
         <item>Bayam</item>
@@ -139,12 +149,6 @@
         <item>Cabai adalah buah dan tumbuhan anggota genus Capsicum. Buahnya dapat digolongkan sebagai sayuran maupun bumbu, tergantung bagaimana pemanfaatannya. Sebagai bumbu, buah cabai yang pedas sangat populer di Asia Tenggara sebagai penguat rasa untuk makanan. Bagi seni masakan Padang, cabai bahkan dianggap sebagai "bahan makanan pokok" kesepuluh (alih-alih kesembilan). Sangat sulit bagi masakan Padang dibuat tanpa cabai.</item>
         <item>Seledri (Apium graveolens L.) adalah sayuran daun dan tumbuhan obat yang biasa digunakan sebagai bumbu masakan. Beberapa negara termasuk Jepang, Cina dan Korea mempergunakan bagian tangkai daun sebagai bahan makanan. Di Indonesia tumbuhan ini diperkenalkan oleh penjajah Belanda dan digunakan daunnya untuk menyedapkan sup atau sebagai lalap.</item>
     </string-array>
-
-    <!--    <string-array name="data_result">-->
-    <!--        <item>Bayam</item>-->
-    <!--        <item>Cabai</item>-->
-    <!--        <item>Seledri</item>-->
-    <!--    </string-array>-->
 
     <integer-array name="data_result_photo">
         <item>@drawable/bayam</item>

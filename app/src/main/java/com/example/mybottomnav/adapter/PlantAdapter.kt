@@ -1,59 +1,70 @@
 package com.example.mybottomnav.adapter
 
-import android.app.Activity
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.app.ActivityOptionsCompat
-import androidx.core.util.Pair
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.mybottomnav.R
-import com.example.mybottomnav.data.Plant
-import com.example.mybottomnav.ui.Detail.DetailActivity
 
-class PlantAdapter(private val listPlant: ArrayList<Plant>) : RecyclerView.Adapter<PlantAdapter.ListViewHolder>() {
+class PlantAdapter(private var recommendations: List<String>) :
+    RecyclerView.Adapter<PlantAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
+
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
+
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var plantPhoto: ImageView = itemView.findViewById(R.id.plant_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_plants_name)
-        var tvDesc: TextView = itemView.findViewById(R.id.tv_plants_desc)
+        var ivPlant: ImageView = itemView.findViewById(R.id.iv_plant)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
         return ListViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (photo, name, desc)=listPlant[position]
-        val limitedDesc = if (desc.length > 25) desc.substring(0, 20) + "..." else desc
-        holder.plantPhoto.setImageResource(photo)
-        holder.tvName.text = name
-        holder.tvDesc.text = limitedDesc
+        val recommendation = recommendations[position].replace("-", " ")
+
+        holder.tvName.text = recommendation.split(" ").joinToString(" ") { it.capitalize() }
+        if (recommendation.contains("cabai")) {
+            holder.ivPlant.setImageResource(R.drawable.cabai)
+        } else if (recommendation.contains("kentang")) {
+            holder.ivPlant.setImageResource(R.drawable.kentang)
+        } else if (recommendation.contains("kubis")) {
+            holder.ivPlant.setImageResource(R.drawable.kubis)
+        } else if (recommendation.contains("merah")) {
+            holder.ivPlant.setImageResource(R.drawable.bawang_merah)
+        } else if (recommendation.contains("putih")) {
+            holder.ivPlant.setImageResource(R.drawable.bawang_putih)
+        }
 
         holder.itemView.setOnClickListener {
-            val moveToDetail = Intent (holder.itemView.context, DetailActivity::class.java)
-            moveToDetail.putExtra("key_plant", listPlant[holder.adapterPosition])
-            holder.itemView.context.startActivity(moveToDetail, ActivityOptionsCompat.makeSceneTransitionAnimation(holder.itemView.context as Activity).toBundle())
+            onItemClickCallback.onItemClicked(recommendation)
         }
     }
 
+
     interface OnItemClickCallback {
-        fun onItemClicked(data: Plant)
+        fun onItemClicked(data: String)
     }
 
-    override fun getItemCount(): Int = listPlant.size
+    override fun getItemCount(): Int {
+        return recommendations.size
+    }
+
+    fun setRecommendations(recommendations: List<String>) {
+        this.recommendations = recommendations
+        notifyDataSetChanged()
+    }
 
 
 }
