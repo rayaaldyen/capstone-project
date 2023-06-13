@@ -59,6 +59,7 @@ class SignUpActivity : AppCompatActivity() {
             !TextUtils.isEmpty(name) && isEmailValid(email) && isPasswordValid(password)
 
     }
+
     private fun setupAction() {
         binding.signupButton.setOnClickListener {
             val name = binding.nameEditText.text.toString()
@@ -134,6 +135,7 @@ class SignUpActivity : AppCompatActivity() {
             this
         )[SignUpViewModel::class.java]
     }
+
     private fun errorMessage() {
         Toast.makeText(
             this@SignUpActivity,
@@ -143,7 +145,7 @@ class SignUpActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun playAnimation(){
+    private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.registerImage, View.TRANSLATION_X, -30f, 30f).apply {
             duration = 6000
             repeatCount = ObjectAnimator.INFINITE
@@ -151,17 +153,33 @@ class SignUpActivity : AppCompatActivity() {
         }.start()
 
         val tvTitle = ObjectAnimator.ofFloat(binding.tvRegister, View.ALPHA, 1f).setDuration(300)
-        val ivUsername = ObjectAnimator.ofFloat(binding.usernameIcon, View.ALPHA, 1f).setDuration(300)
-        val etlUsername = ObjectAnimator.ofFloat(binding.nameEditTextLayout, View.ALPHA, 1f).setDuration(300)
+        val ivUsername =
+            ObjectAnimator.ofFloat(binding.usernameIcon, View.ALPHA, 1f).setDuration(300)
+        val etlUsername =
+            ObjectAnimator.ofFloat(binding.nameEditTextLayout, View.ALPHA, 1f).setDuration(300)
         val ivEmail = ObjectAnimator.ofFloat(binding.emailIcon, View.ALPHA, 1f).setDuration(300)
-        val etlEmail = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(300)
-        val ivPassword = ObjectAnimator.ofFloat(binding.passwordIcon, View.ALPHA, 1f).setDuration(300)
-        val etlPassword = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(300)
+        val etlEmail =
+            ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(300)
+        val ivPassword =
+            ObjectAnimator.ofFloat(binding.passwordIcon, View.ALPHA, 1f).setDuration(300)
+        val etlPassword =
+            ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(300)
         val btnReg = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(300)
-        val tlLoginDirector = ObjectAnimator.ofFloat(binding.loginDirector, View.ALPHA, 1f).setDuration(300)
+        val tlLoginDirector =
+            ObjectAnimator.ofFloat(binding.loginDirector, View.ALPHA, 1f).setDuration(300)
 
         AnimatorSet().apply {
-            playSequentially(tvTitle, ivUsername, etlUsername, ivEmail, etlEmail, ivPassword, etlPassword, btnReg, tlLoginDirector)
+            playSequentially(
+                tvTitle,
+                ivUsername,
+                etlUsername,
+                ivEmail,
+                etlEmail,
+                ivPassword,
+                etlPassword,
+                btnReg,
+                tlLoginDirector
+            )
             start()
         }
     }

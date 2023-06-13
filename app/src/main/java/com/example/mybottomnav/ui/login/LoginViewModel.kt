@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.example.mybottomnav.data.api.ApiConfig
 import com.example.mybottomnav.data.remote.user.LoginResponse
 import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,7 +39,7 @@ class LoginViewModel : ViewModel() {
 """.trimIndent()
 
         val requestType = "application/json; charset=utf-8".toMediaType()
-        val requestBody = RequestBody.create(requestType, json)
+        val requestBody = json.toRequestBody(requestType)
         val client = ApiConfig.getApiService().login(requestBody)
 
         client.enqueue(object : Callback<LoginResponse> {

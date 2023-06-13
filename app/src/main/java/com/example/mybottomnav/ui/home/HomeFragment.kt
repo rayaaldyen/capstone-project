@@ -43,10 +43,7 @@ class HomeFragment : Fragment() {
     private val list = ArrayList<Tanaman>()
 
     private val locationPermission = Manifest.permission.ACCESS_FINE_LOCATION
-    private val locationPermissionRequestCode = 123
-
-    private val API_KEY = "e61e1a9320bdb4be62e48baf4ef114b5"
-
+    private val locationPermissionRequestCode = 10
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -109,11 +106,13 @@ class HomeFragment : Fragment() {
     }
 
 
+
     @OptIn(DelicateCoroutinesApi::class)
     private fun fetchWeatherData(latitude: Double, longitude: Double) {
+        val apiKey = getString(R.string.api_key)
         GlobalScope.launch(Dispatchers.IO) {
             val apiUrl =
-                "https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$API_KEY"
+                "https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey"
             var connection: HttpURLConnection? = null
             try {
                 val url = URL(apiUrl)

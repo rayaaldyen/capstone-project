@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">My Bottom Nav</string>
+    <string name="app_name">BotaniPlan</string>
     <string name="title_home">Home</string>
     <string name="title_add">Add</string>
     <string name="title_history">History</string>
@@ -9,7 +9,7 @@
     <string name="type_weather">Heavy \nRain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
-    <string name="popular">Most Popular Horticulture</string>
+    <string name="popular">Tanaman Hortikultura Terpopuler</string>
     <string name="logout">Logout</string>
     <string name="username_layout">Username</string>
     <string name="email_layout">Email</string>
@@ -21,32 +21,34 @@
     <string name="username">Username</string>
     <string name="name">Name</string>
     <string name="desc">Desc</string>
-    <string name="see_details">See Details</string>
+    <string name="empty_data">Data tidak ditemukan</string>
+    <string name="see_details">Lihat Detail</string>
     <string name="input_prediksi">Temukan tanaman yang cocok untuk lahanmu</string>
-    <string name="ph_tanah">PH Tanah</string>
-    <string name="curah_hujan">Curah Hujan</string>
-    <string name="suhu">Suhu</string>
     <string name="prediksi">Prediksi</string>
     <string name="mulai_prediksi">Mulai Prediksi</string>
     <string name="hasil_prediksi">Hasil Prediksi</string>
     <string name="result_text">Daftar tanaman yang mungkin cocok</string>
     <string name="login">Login</string>
-    <string name="acc_availability">Don`t have an account yet?</string>
-    <string name="acc_availability2">Already have an account?</string>
-    <string name="to_register">Sign Up here</string>
+    <string name="acc_availability">Belum punya akun?</string>
+    <string name="acc_availability2">Sudah punya akun?</string>
+    <string name="to_register">Daftar disini</string>
     <string name="recommendation_text">Rekomendasi Tanaman</string>
     <string name="predict_text">Prediksi Harga</string>
-    <string name="to_login">Login Here</string>
+    <string name="to_login">Login disini</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
+    <string name="recomendation">Recommendation</string>
+    <string name="recomendation_failed">Proses pencarian tanaman gagal, mohon coba lagi</string>
+    <string name="recomendation_Success">Proses pencarian tanaman sukses</string>
     <string name="invalid_email">Format alamat email salah</string>
-    <string name="error_password">Password length must be at least 8 characters or more</string>
+    <string name="api_key">e61e1a9320bdb4be62e48baf4ef114b5</string>
+    <string name="error_password">Panjang karakter password minimal 8 karakter atau lebih</string>
     <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
-    <string name="signup_failed">There is an error while entering the data</string>
-    <string name="register_agreement">By signing up, you’re agree to our Terms &amp; Conditions and Privacy Policy</string>
+    <string name="signup_failed">Terjadi kesalahan ketika memasukkan data</string>
+    <string name="register_agreement">Dengan mendaftar, Anda menyetujui Persyaratan &amp; Ketentuan dan Kebijakan Privasi</string>
     <string name="detail_tanaman">Detail Tanaman</string>
-    <string name="detail_desc">Detail Description</string>
-    <string name="detail_name">Detail Name</string>
+    <string name="detail_desc">Detail Deskripsi</string>
+    <string name="detail_name">Detail Nama</string>
     <string name="signup_pass_tittle">Selamat!</string>
     <string name="permission_rejected">Permisi ditolak</string>
     <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
@@ -54,10 +56,9 @@
     <string name="care_level">Care Level</string>
     <string name="size">Size</string>
     <string name="result">Hasil</string>
-    <string name="alert_login">Login failed</string>
+    <string name="alert_login">Login gagal</string>
     <string name="back">Back</string>
-    <string name="login_invalid">Make sure the email or password you entered is correct</string>
-    <string name="market_price_prediction">Market Price Prediction</string>
+    <string name="login_invalid">Pastikan email atau password yang Anda masukkan benar</string>
 
     <string-array name="data_tanaman">
         <item>Tomat</item>
@@ -135,15 +136,17 @@
         <item>Seledri (Apium graveolens L.) adalah sayuran daun dan tumbuhan obat yang biasa digunakan sebagai bumbu masakan. Beberapa negara termasuk Jepang, Cina dan Korea mempergunakan bagian tangkai daun sebagai bahan makanan. Di Indonesia tumbuhan ini diperkenalkan oleh penjajah Belanda dan digunakan daunnya untuk menyedapkan sup atau sebagai lalap.</item>
     </string-array>
 
-<!--    <string-array name="data_result">-->
-<!--        <item>Bayam</item>-->
-<!--        <item>Cabai</item>-->
-<!--        <item>Seledri</item>-->
-<!--    </string-array>-->
+    <!--    <string-array name="data_result">-->
+    <!--        <item>Bayam</item>-->
+    <!--        <item>Cabai</item>-->
+    <!--        <item>Seledri</item>-->
+    <!--    </string-array>-->
 
     <integer-array name="data_result_photo">
         <item>@drawable/bayam</item>
         <item>@drawable/cabai</item>
         <item>@drawable/seledri</item>
     </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
