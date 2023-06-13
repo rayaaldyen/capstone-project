@@ -54,7 +54,7 @@ class PredictActivity : AppCompatActivity() {
         }
         predictViewModel.error.observe(this){
             if (it){
-                Toast.makeText(this, "Waktu Koneksi Habis. Coba Lagi.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.time_out), Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -55,9 +55,9 @@
     <string name="signup_pass_tittle">Selamat!</string>
     <string name="permission_rejected">Permisi ditolak</string>
     <string name="signup_successfully">Akun Anda telah berhasil dibuat, silahkan login untuk masuk ke halaman utama</string>
-    <string name="category">Category</string>
-    <string name="care_level">Care Level</string>
-    <string name="size">Size</string>
+    <string name="category">Kategori</string>
+    <string name="care_level">Tingkat Perawatan</string>
+    <string name="size">Ukuran</string>
     <string name="result">Hasil</string>
     <string name="alert_login">Login gagal</string>
     <string name="back">Back</string>
@@ -73,6 +73,7 @@
     <string name="hectar">(hektar)</string>
     <string name="kwintal">(kuintal)</string>
     <string name="password_reminder">Minimal 8 Karakter</string>
+    <string name="time_out" tools:ignore="ExtraTranslation">Waktu Koneksi Habis. Coba Lagi.</string>
 
     <string-array name="data_tanaman">
         <item>Cabai</item>

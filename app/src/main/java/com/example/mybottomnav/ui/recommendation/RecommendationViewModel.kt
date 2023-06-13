@@ -70,7 +70,7 @@ class RecommendationViewModel(application: Application) : AndroidViewModel(appli
                 _error.value = true
                 Toast.makeText(
                     context,
-                    context.getString(R.string.recomendation_failed),
+                    context.getString(R.string.time_out),
                     Toast.LENGTH_SHORT
                 ).show()
             }
