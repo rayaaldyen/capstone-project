@@ -60,21 +60,23 @@ class HomeFragment : Fragment() {
         playAnimation()
         rvTanaman = binding.rvPopularPlants
         rvTanaman.setHasFixedSize(true)
-        list.addAll(getListTanaman())
-        showRecyclerList()
 
+        showRecyclerList()
 
         tvTemperature = binding.tvTemperature
         tvRegion = binding.tvRegion
         tvWeather = binding.tvTypeWeather
-
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         startLocationUpdates()
+    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        list.addAll(getListTanaman())
     }
 
 

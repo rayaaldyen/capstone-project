@@ -17,7 +17,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/backgroundLayout"
                 android:layout_width="match_parent"
-                android:layout_height="430dp"
+                android:layout_height="460dp"
                 android:layout_marginTop="210dp"
                 android:background="@drawable/gradient_lime_green"
                 app:layout_constraintTop_toTopOf="parent"
@@ -115,20 +115,21 @@
                     android:id="@+id/constraintLayout2"
                     android:layout_width="293dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/bg_layout"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_layout_white"
                     android:elevation="10dp"
                     android:padding="8dp"
                     android:alpha='0'
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.494"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_popular_plants"
-                        android:layout_width="273dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="214dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -141,13 +142,15 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/konsumsi"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:layout_marginTop="16dp"
                     android:alpha='0'
+                    android:text="@string/konsumsi"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
                     app:fontFamily="sans-serif-light"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

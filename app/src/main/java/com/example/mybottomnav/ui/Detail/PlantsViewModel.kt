@@ -63,7 +63,7 @@ class PlantsViewModel(application: Application) : AndroidViewModel(application) 
                 _error.value = true
                 Toast.makeText(
                     context,
-                    context.getString(R.string.recomendation_failed),
+                    context.getString(R.string.connection_failed),
                     Toast.LENGTH_SHORT
                 ).show()
             }

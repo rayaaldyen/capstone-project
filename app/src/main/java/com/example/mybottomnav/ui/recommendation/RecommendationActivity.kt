@@ -71,9 +71,10 @@ class RecommendationActivity : AppCompatActivity() {
                         if (result.isEmpty()) {
                             recommendationViewModel.setRecommendation(latitude, longitude)
                         }
+                        recommendationViewModel.result.removeObservers(this)
                         recommendationViewModel.result.observe(this) { listResult ->
                             result = listResult as MutableList<String>
-                            if (result.isNotEmpty()) {
+                            if (listResult.isNotEmpty()) {
                                 startActivity(
                                     Intent(
                                         this@RecommendationActivity,
@@ -81,19 +82,16 @@ class RecommendationActivity : AppCompatActivity() {
                                     ).apply {
                                         putExtra(
                                             "RESULT",
-                                            listResult.toTypedArray()
+                                            result.toTypedArray()
                                         )
                                     })
                             }
                         }
-                        recommendationViewModel.error.observe(this) {
-//                            if (it == false) {
-//
-//                            }
-                        }
                         recommendationViewModel.isLoading.observe(this) {
                             showLoading(it)
                         }
+
+
 
                     }
                 }
@@ -104,6 +102,7 @@ class RecommendationActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        recommendationViewModel.error.removeObservers(this)
         _binding = null
     }
 

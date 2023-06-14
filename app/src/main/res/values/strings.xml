@@ -34,17 +34,18 @@
     <string name="hasil_prediksi">Hasil Prediksi</string>
     <string name="result_text">Daftar tanaman yang mungkin cocok</string>
     <string name="login">Login</string>
-    <string name="acc_availability">Don`t have an account yet?</string>
-    <string name="acc_availability2">Already have an account?</string>
-    <string name="to_register">Sign Up here</string>
+    <string name="acc_availability">Belum punya akun?</string>
+    <string name="acc_availability2">Sudah punya akun?</string>
+    <string name="to_register">Daftar disini</string>
     <string name="recommendation_text">Rekomendasi Tanaman</string>
-    <string name="to_login">Login Here</string>
+    <string name="to_login">Login disini</string>
     <string name="signup">Sign Up</string>
     <string name="start">Start</string>
     <string name="konsumsi" tools:ignore="ExtraTranslation">Dikonsumsi di Indonesia dalam Ribu Ton (2021)</string>
     <string name="invalid_email">Format alamat email salah</string>
     <string name="api_key">e61e1a9320bdb4be62e48baf4ef114b5</string>
     <string name="recomendation_failed">Proses pencarian tanaman gagal, mohon coba lagi</string>
+    <string name="connection_failed">Data tidak ditemukan karena masalah jaringan</string>
     <string name="error_password">Panjang karakter password minimal 8 karakter atau lebih</string>
     <string name="app_desc">Aplikasi prediksi tanaman yang cocok untuk kondisi geografis petani</string>
     <string name="signup_failed">Terjadi kesalahan ketika memasukkan data</string>

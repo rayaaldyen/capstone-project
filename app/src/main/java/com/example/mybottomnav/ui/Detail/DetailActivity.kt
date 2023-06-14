@@ -13,9 +13,6 @@ import com.example.mybottomnav.databinding.ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
     private lateinit var viewModel: PlantsViewModel
-//    companion object{
-//        const val EXTRA_PLANT = "key_plant"
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
