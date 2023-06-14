@@ -9,7 +9,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mybottomnav.adapter.PlantAdapter
 import com.example.mybottomnav.databinding.ActivityResultBinding
-import com.example.mybottomnav.ui.Detail.DetailActivity
+import com.example.mybottomnav.ui.detail.DetailActivity
 
 class ResultActivity : AppCompatActivity() {
 

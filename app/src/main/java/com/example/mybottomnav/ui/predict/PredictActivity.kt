@@ -1,12 +1,11 @@
 package com.example.mybottomnav.ui.predict
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.*
-import androidx.lifecycle.MutableLiveData
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.R
 import com.example.mybottomnav.custom.CustomButton

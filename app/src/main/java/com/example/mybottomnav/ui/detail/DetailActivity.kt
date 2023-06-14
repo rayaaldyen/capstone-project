@@ -1,11 +1,9 @@
-package com.example.mybottomnav.ui.Detail
+package com.example.mybottomnav.ui.detail
 
-import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.mybottomnav.R
 import com.example.mybottomnav.databinding.ActivityDetailBinding
@@ -39,12 +37,12 @@ class DetailActivity : AppCompatActivity() {
             if (it == true) {
                 errorDisplay()
             } else {
-                viewModel.plants.observe(this) {
-                    tvDetailNama.text = it[0].name.toString()
-                    tvDetailDesc.text = it[0].desc.toString()
-                    tvCategory.text = it[0].category.toString()
-                    tvCare.text = it[0].careLevel.toString()
-                    tvSize.text = it[0].size.toString()
+                viewModel.plants.observe(this) { plants ->
+                    tvDetailNama.text = plants[0].name.toString()
+                    tvDetailDesc.text = plants[0].desc.toString()
+                    tvCategory.text = plants[0].category.toString()
+                    tvCare.text = plants[0].careLevel.toString()
+                    tvSize.text = plants[0].size.toString()
                 }
             }
         }

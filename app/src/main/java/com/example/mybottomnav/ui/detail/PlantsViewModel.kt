@@ -1,4 +1,4 @@
-package com.example.mybottomnav.ui.Detail
+package com.example.mybottomnav.ui.detail
 
 import android.app.Application
 import android.widget.Toast
@@ -25,10 +25,6 @@ class PlantsViewModel(application: Application) : AndroidViewModel(application) 
 
     private val _plants = MutableLiveData<List<PlantsItem>>()
     val plants: LiveData<List<PlantsItem>> = _plants
-
-    companion object {
-        private const val TAG = "PlantsVideModel"
-    }
 
     fun getPlant(id: Int) {
         _isLoading.value = true

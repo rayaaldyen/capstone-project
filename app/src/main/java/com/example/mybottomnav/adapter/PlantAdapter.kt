@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mybottomnav.R
+import java.util.*
 
 class PlantAdapter(private var recommendations: List<String>) :
     RecyclerView.Adapter<PlantAdapter.ListViewHolder>() {
@@ -34,7 +35,7 @@ class PlantAdapter(private var recommendations: List<String>) :
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val recommendation = recommendations[position].replace("-", " ")
 
-        holder.tvName.text = recommendation.split(" ").joinToString(" ") { it.capitalize() }
+        holder.tvName.text = recommendation.split(" ").joinToString(" ") { it.capitalize(Locale.getDefault()) }
         if (recommendation.contains("cabai")) {
             holder.ivPlant.setImageResource(R.drawable.cabai)
         } else if (recommendation.contains("kentang")) {

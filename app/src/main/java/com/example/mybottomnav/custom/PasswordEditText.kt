@@ -5,7 +5,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
-import com.example.mybottomnav.R
 import com.example.storyapp.utils.isPasswordValid
 
 class PasswordEditText : AppCompatEditText {

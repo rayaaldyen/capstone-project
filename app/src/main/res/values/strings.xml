@@ -5,8 +5,8 @@
     <string name="title_history">History</string>
     <string name="title_account">Account</string>
     <string name="region">Region</string>
-    <string name="temperature">30°C</string>
-    <string name="type_weather">Heavy Rain</string>
+    <string name="temperature">%s°C</string>
+    <string name="type_weather">Heavy \nRain</string>
     <string name="plant">Plant Name</string>
     <string name="percent">20%</string>
     <string name="predict_text" tools:ignore="ExtraTranslation">Prediksi Harga</string>
@@ -25,13 +25,16 @@
     <string name="name">Name</string>
     <string name="desc">Desc</string>
     <string name="see_details">See Details</string>
-    <string name="input_prediksi">Temukan tanaman yang cocok untuk lahanmu</string>
-    <string name="ph_tanah">PH Tanah</string>
+    <string name="informasi_geo">Berikut ini adalah kondisi geografis dari lokasi anda</string>
+    <string name="input_prediksi">Temukan tanaman yang cocok untuk kondisi geografismu</string>
+    <string name="ketinggian_title">Ketinggian</string>
+    <string name="ketinggian">%s mdpl</string>
     <string name="curah_hujan">Curah Hujan</string>
     <string name="suhu">Suhu</string>
+    <string name="kelembaban">Kelembaban</string>
     <string name="predict">Prediksi</string>
     <string name="mulai_prediksi">Mulai Prediksi</string>
-    <string name="hasil_prediksi">Hasil Prediksi</string>
+    <string name="hasil_rekomendasi">Hasil Rekomendasi</string>
     <string name="result_text">Daftar tanaman yang mungkin cocok</string>
     <string name="login">Login</string>
     <string name="acc_availability">Belum punya akun?</string>

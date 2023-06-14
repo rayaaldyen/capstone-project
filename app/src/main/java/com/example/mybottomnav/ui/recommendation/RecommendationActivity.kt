@@ -57,6 +57,7 @@ class RecommendationActivity : AppCompatActivity() {
 
 
     private fun recommendation() {
+//        recommendationViewModel.result.removeObservers(this)
         val fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -71,7 +72,6 @@ class RecommendationActivity : AppCompatActivity() {
                         if (result.isEmpty()) {
                             recommendationViewModel.setRecommendation(latitude, longitude)
                         }
-                        recommendationViewModel.result.removeObservers(this)
                         recommendationViewModel.result.observe(this) { listResult ->
                             result = listResult as MutableList<String>
                             if (listResult.isNotEmpty()) {
@@ -90,9 +90,6 @@ class RecommendationActivity : AppCompatActivity() {
                         recommendationViewModel.isLoading.observe(this) {
                             showLoading(it)
                         }
-
-
-
                     }
                 }
         } else {
@@ -120,7 +117,6 @@ class RecommendationActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.GONE
         }
     }
-
 
 
     private fun playAnimation() {

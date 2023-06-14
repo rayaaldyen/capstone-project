@@ -3,17 +3,14 @@ package com.example.mybottomnav.ui.predict
 import android.annotation.SuppressLint
 import android.app.Application
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.mybottomnav.data.api.ApiConfig
 import com.example.mybottomnav.data.remote.user.PredictResponse
-import com.example.mybottomnav.data.remote.user.User
 import com.example.mybottomnav.model.UserPreference
 import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -49,7 +46,7 @@ class PredictViewModel(aplication: Application) : AndroidViewModel(aplication) {
 """.trimIndent()
 
         val requestType = "application/json; charset=utf-8".toMediaType()
-        val requestBody = RequestBody.create(requestType, json)
+        val requestBody = json.toRequestBody(requestType)
         val client = ApiConfig.getApiService().predict("Bearer $token", requestBody)
 
         client.enqueue(object : Callback<PredictResponse> {
