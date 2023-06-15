@@ -2,7 +2,7 @@ package com.example.mybottomnav.data.api
 
 
 import com.example.mybottomnav.data.remote.user.LoginResponse
-import com.example.mybottomnav.data.remote.user.PredictResponse
+import com.example.mybottomnav.data.remote.prediction.PredictResponse
 import com.example.mybottomnav.data.remote.user.SignUpResponse
 import okhttp3.RequestBody
 import retrofit2.Call

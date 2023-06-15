@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.mybottomnav.data.api.ApiConfig
-import com.example.mybottomnav.data.remote.user.PredictResponse
+import com.example.mybottomnav.data.remote.prediction.PredictResponse
 import com.example.mybottomnav.model.UserPreference
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody

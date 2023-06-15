@@ -1,4 +1,4 @@
-package com.example.mybottomnav.data.remote.user
+package com.example.mybottomnav.data.remote.prediction
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
