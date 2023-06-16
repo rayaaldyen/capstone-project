@@ -88,6 +88,9 @@ BotaniPlan app is used to interact with users to provide recommendations related
 * USB Cable (to Connect Android Device to your Computer)
 
 ### 1. Clone this Project to your Computer
+```bash
+git clone https://github.com/rayaaldyen/capstone-project
+```
 
 or you can use Android Studio 
 
